@@ -1,3 +1,16 @@
+## Welcome to My Github
+
+Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed a passion for data science and analytics.
+
+Project 1 – Automatic Reddit Analyzer and Visualizer
+
+This script connects to Reddit and Google API. Pulls the top 20 hot posts from the AITA subreddit counts the votes and pushes that info to google sheets – where it gets visualized. The script is automatically run every hour in a virtual server from AWS.
+
+Here is the [Link](https://docs.google.com/spreadsheets/d/e/2PACX-1vSGATLkDaSs9x3OhYfOsgm8Xwic61eXyqG1NZ-Y40QHg4UZlk9L1XikWOVY0QGPi71KlRtVO_eUZUAE/pubchart?oid=1753950542&format=interactive) to the visualization.
+
+## Welcome to GitHub Page
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/imihran/portfolio/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
