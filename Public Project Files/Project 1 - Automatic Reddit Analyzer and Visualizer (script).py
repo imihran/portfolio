@@ -83,4 +83,4 @@ df=df[['Title','YTA', 'NTA','NAH','ESH','Total_Votes','Arshole_Ratio_%','INFO','
 sh = gc.open('aitareddit1')
 sh[0].set_dataframe(df,(1,1))
 
-#fuck yeh!
+#end
