@@ -15,3 +15,6 @@ Put together a large dataset of financial data and used Power BI to make a prese
 **Other** – Data shaping manipulating cleaning examples. Here is the **[Link](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples)**
 
 **All** the public files and scripts can be found in this **[Link](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files)**
+
+
+**Certification** - **[Link](https://github.com/imihran/portfolio/tree/master/Certifications)**
