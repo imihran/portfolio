@@ -17,4 +17,4 @@ Put together a large dataset of financial data and used Power BI to make a prese
 **All** the public files and scripts can be found in this **[Link](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files)**
 
 
-**Certification** - **[Link](https://github.com/imihran/portfolio/tree/master/Certifications)**
+**Certifications** - **[Link](https://github.com/imihran/portfolio/tree/master/Certifications)**
