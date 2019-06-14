@@ -15,11 +15,11 @@ Put together a large dataset of financial data and used Power BI to make a prese
 
 **Other Data Cleaning/Manipulation/Extracting Actionable insight Projects**
 
- Sunlight in Austin - **[Link]https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Cleaning%20Data%20and%20Analysis%20-%20Sunlight%20in%20Austin.ipynb**
- Olympic Medals - **[Link]https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Data%20Manipulation%20(Python)%20-%20Olympic%20Medals.ipynb**
- Cryptocurrency - **[Link]https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Exploring%20the%20Bitcoin%20Cryptocurrency%20Market.ipynb**
- Name Game Gender Prediction using sound - **[Link]https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Name%20Game_%20Gender%20Prediction%20using%20Sound.ipynb**
- Tidying Data -  **[Link]https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Tidying%20Data%20-%20Life%20exepctancy.ipynb**
+ Sunlight in Austin - **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Cleaning%20Data%20and%20Analysis%20-%20Sunlight%20in%20Austin.ipynb)**
+ Olympic Medals - **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Data%20Manipulation%20(Python)%20-%20Olympic%20Medals.ipynb)**
+ Cryptocurrency - **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Exploring%20the%20Bitcoin%20Cryptocurrency%20Market.ipynb)**
+ Name Game Gender Prediction using sound - **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Name%20Game_%20Gender%20Prediction%20using%20Sound.ipynb)**
+ Tidying Data -  **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Tidying%20Data%20-%20Life%20exepctancy.ipynb)**
 
 
 **Other** – Data shaping manipulating cleaning examples. Here is the **[Link](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples)**
