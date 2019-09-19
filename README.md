@@ -4,17 +4,21 @@
 
 Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed a passion for data science and analytics.
 
-**Project 1** – Automatic Reddit Analyzer and Visualizer
+**Project 1** – Automatic Reddit Analyzer and Visualizer - Build in Python
 
-This script connects to Reddit and Google API. Pulls the top 20 hot posts from the AITA subreddit counts the votes and pushes that info to google sheets – where it gets visualized. The script is automatically run every hour in a virtual server from AWS. Here is the **[Link](https://docs.google.com/spreadsheets/d/e/2PACX-1vSGATLkDaSs9x3OhYfOsgm8Xwic61eXyqG1NZ-Y40QHg4UZlk9L1XikWOVY0QGPi71KlRtVO_eUZUAE/pubchart?oid=1753950542&format=interactive)** to the visualization.
+This script connects to Reddit and Google API. Pulls the top 20 hot posts from the AITA subreddit counts the votes and pushes that info to google sheets – where it gets visualized. The script is automatically run every hour in a virtual server from AWS. Here is the **[Project Link](https://docs.google.com/spreadsheets/d/e/2PACX-1vSGATLkDaSs9x3OhYfOsgm8Xwic61eXyqG1NZ-Y40QHg4UZlk9L1XikWOVY0QGPi71KlRtVO_eUZUAE/pubchart?oid=1753950542&format=interactive)** to the visualization.
 
 **Project 2** – Power BI and Financial Data
 
-Put together a large dataset of financial data and used Power BI to make a presentation. Video **[Link](https://youtu.be/NEpZe8PdqW8?list=PLyIglp94oFaoDm_jpBwIuLI7JBrdkQlGq)**
+Put together a large dataset of financial data and used Power BI to make a presentation. Video **[Project Link](https://youtu.be/NEpZe8PdqW8?list=PLyIglp94oFaoDm_jpBwIuLI7JBrdkQlGq)**
+
+**Project 3** – Azure VM Mapping Tool - Build in Python
+
+This tool is designed to take server inventory as an input CSV or excel file type and use the azure resource API to find the right virtual machine in order to find the respective pricing. **[Project Link](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool)**
 
 
 **Other Data Cleaning/Manipulation/Extracting Actionable insight Projects**
-
+ 
  Sunlight in Austin - **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Cleaning%20Data%20and%20Analysis%20-%20Sunlight%20in%20Austin.ipynb)**
  
  Olympic Medals - **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Data%20Manipulation%20(Python)%20-%20Olympic%20Medals.ipynb)**
@@ -25,9 +29,6 @@ Put together a large dataset of financial data and used Power BI to make a prese
  
  Tidying Data -  **[Link](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Tidying%20Data%20-%20Life%20exepctancy.ipynb)**
 
-
-
 **All** the public files and scripts can be found in this **[Link](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files)**
-
 
 **Certifications** - **[Link](https://github.com/imihran/portfolio/tree/master/Certifications)**
