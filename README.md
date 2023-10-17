@@ -1,5 +1,5 @@
-﻿![Image](https://media.licdn.com/dms/image/D5635AQGQ6pYxVhpz4g/profile-framedphoto-shrink_400_400/0/1697559426290?e=1698184800&v=beta&t=0ShcTd5mc8Vn8G5R-8tQDi0pS52sF-sTGdp9PWgFZEY)
-[LinkedIn](https://www.linkedin.com/in/mish-akopyan/)**
+﻿**![Image](https://media.licdn.com/dms/image/D5635AQGQ6pYxVhpz4g/profile-framedphoto-shrink_400_400/0/1697559426290?e=1698184800&v=beta&t=0ShcTd5mc8Vn8G5R-8tQDi0pS52sF-sTGdp9PWgFZEY)**
+**[LinkedIn](https://www.linkedin.com/in/mish-akopyan/)**
 
 
 ### Welcome to My Github
