@@ -1,4 +1,4 @@
-﻿![Image](https://media-exp1.licdn.com/dms/image/C5603AQHA7A8gCkjmlQ/profile-displayphoto-shrink_200_200/0?e=1589414400&v=beta&t=KIOBbrMqlbswDtjJEUNFhMqYQdn9l7wcacv54AAY774)
+﻿![Image](https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png)
 
 ### Welcome to My Github
 
