@@ -51,15 +51,26 @@ Example of data manipulation. We commence by meticulously examining the dataset 
 **Certifications** 
    - <img style="float: right" src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="drawing" width="25"/> Foundations of Data Science  
    
-   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Data Science: Understanding the Basics 
-   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Microsoft Power BI Desktop  
-   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Bracketology Club: Using March Madness to Learn Data Science
-   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Data Science & Analytics Career Paths & Certifications: First Steps  
-   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Intro to Python for Data Science Course - 6057754
-   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Intermediate Python for Data Science Course - 6059668
-   - <img src="https://yt3.googleusercontent.com/QF2XZE3XOAxYOuOHUpg7EKGa1BKglFnBL4gbEIhCR7fzifH38rvStQdIL7vOX0mLRTabmrBaWB8=s176-c-k-c0x00ffffff-no-rj" alt="drawing" width="25"/> Certificate SQL Fundamentals - 1060-9374654
-   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Python Data Science Toolbox Part 1 - 6102002
-   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Python Data Science Toolbox Part 2 - 6146869
-   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Importing Data in Python (Part 1) - 6166604
-   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Importing Data in Python (Part 2) - 6212352
-   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Cleaning Data in Python - 6223804
+   - <img style="float: right"  src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Data Science: Understanding the Basics 
+
+   - <img style="float: right"  src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Microsoft Power BI Desktop  
+   
+   - <img style="float: right"  src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Bracketology Club: Using March Madness to Learn Data Science
+   
+   - <img style="float: right"  src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Data Science & Analytics Career Paths & Certifications: First Steps  
+   
+   - <img style="float: right"  src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Intro to Python for Data Science Course - 6057754
+   
+   - <img style="float: right"  src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Intermediate Python for Data Science Course - 6059668
+   
+   - <img style="float: right"  src="https://yt3.googleusercontent.com/QF2XZE3XOAxYOuOHUpg7EKGa1BKglFnBL4gbEIhCR7fzifH38rvStQdIL7vOX0mLRTabmrBaWB8=s176-c-k-c0x00ffffff-no-rj" alt="drawing" width="25"/> Certificate SQL Fundamentals - 1060-9374654
+   
+   - <img style="float: right"  src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Python Data Science Toolbox Part 1 - 6102002
+   
+   - <img style="float: right"  src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Python Data Science Toolbox Part 2 - 6146869
+   
+   - <img style="float: right"  src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Importing Data in Python (Part 1) - 6166604
+   
+   - <img style="float: right"  src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Importing Data in Python (Part 2) - 6212352
+   
+   - <img style="float: right"  src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Cleaning Data in Python - 6223804
