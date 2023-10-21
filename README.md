@@ -54,7 +54,7 @@ Example of data manipulation. We commence by meticulously examining the dataset 
    - Learning Microsoft Power BI Desktop - LinkedIn
    - Bracketology Club: Using March Madness to Learn Data Science - LinkedIn 
    - Data Science & Analytics Career Paths & Certifications: First Steps - LinkedIn 
-   - Statement of Accomplishment - Intro to Python for Data Science Course - DataCamp 6057754
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Intro to Python for Data Science Course - DataCamp 6057754
    - Statement of Accomplishment - Intermediate Python for Data Science Course - DataCamp 6059668
    - Certificate SQL Fundamentals - SoloLearn -1060-9374654
    - Statement of Accomplishment - Python Data Science Toolbox Part 1 - DataCamp 6102002
