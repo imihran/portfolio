@@ -21,7 +21,7 @@ Put together a large dataset of financial data and used Power BI to make a prese
 
 This tool is designed to take server inventory as an input CSV or excel file type and use the azure resource API to find the right virtual machine in order to find the respective pricing. 
 
-**Project 4** – Data Model
+**Data Model**
 
 Built a data model (transaction/fraud/customer) using Excel Power Query to consolidate and visualize 10+ years of data from various reports. data had 60 + million rows and 100+ columns. No link is available because this is confidential information that has customer information.    
 
