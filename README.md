@@ -50,7 +50,7 @@ Example of data manipulation. We commence by meticulously examining the dataset 
 
 **Certifications** 
    - <img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="drawing" width="50"/> Foundations of Data Science - Google
-   - Learning Data Science: Understanding the Basics - LinkedIn
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="50"/> Learning Data Science: Understanding the Basics - LinkedIn
    - Learning Microsoft Power BI Desktop - LinkedIn
    - Bracketology Club: Using March Madness to Learn Data Science - LinkedIn 
    - Data Science & Analytics Career Paths & Certifications: First Steps - LinkedIn 
