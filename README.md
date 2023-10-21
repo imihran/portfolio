@@ -49,7 +49,7 @@ Example of data manipulation. We commence by meticulously examining the dataset 
 **All** the public files and scripts can be found in this **[Link](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files)**
 
 **Certifications** 
-   - <img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="drawing" width="25"/> Foundations of Data Science  
+   - <img style="float: left" src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="drawing" width="25"/> Foundations of Data Science  
    - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Data Science: Understanding the Basics 
    - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Microsoft Power BI Desktop  
    - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Bracketology Club: Using March Madness to Learn Data Science
