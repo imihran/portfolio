@@ -51,14 +51,14 @@ Example of data manipulation. We commence by meticulously examining the dataset 
 **Certifications** 
    - <img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="drawing" width="25"/> Foundations of Data Science - Google
    - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Data Science: Understanding the Basics - LinkedIn
-   - Learning Microsoft Power BI Desktop - LinkedIn
-   - Bracketology Club: Using March Madness to Learn Data Science - LinkedIn 
-   - Data Science & Analytics Career Paths & Certifications: First Steps - LinkedIn 
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Learning Microsoft Power BI Desktop - LinkedIn
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Bracketology Club: Using March Madness to Learn Data Science - LinkedIn 
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="drawing" width="25"/> Data Science & Analytics Career Paths & Certifications: First Steps - LinkedIn 
    - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Intro to Python for Data Science Course - DataCamp 6057754
-   - Statement of Accomplishment - Intermediate Python for Data Science Course - DataCamp 6059668
-   - Certificate SQL Fundamentals - SoloLearn -1060-9374654
-   - Statement of Accomplishment - Python Data Science Toolbox Part 1 - DataCamp 6102002
-   - Statement of Accomplishment - Python Data Science Toolbox Part 2 - DataCamp 6146869
-   - Statement of Accomplishment - Importing Data in Python (Part 1) - DataCamp 6166604
-   - Statement of Accomplishment - Importing Data in Python (Part 2) - DataCamp 6212352
-   - Statement of Accomplishment - Cleaning Data in Python - DataCamp 6223804
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Intermediate Python for Data Science Course - DataCamp 6059668
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Certificate SQL Fundamentals - SoloLearn -1060-9374654
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Python Data Science Toolbox Part 1 - DataCamp 6102002
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Python Data Science Toolbox Part 2 - DataCamp 6146869
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Importing Data in Python (Part 1) - DataCamp 6166604
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Importing Data in Python (Part 2) - DataCamp 6212352
+   - <img src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hq30ze9287y9ztkmcdhy" alt="drawing" width="25"/> Statement of Accomplishment - Cleaning Data in Python - DataCamp 6223804
