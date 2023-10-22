@@ -2,7 +2,7 @@
 
 - **[LinkedIn](https://www.linkedin.com/in/mish-akopyan/)**
 
-- **[Resume](https://drive.google.com/file/d/1-9g74Od3YKRUEKrJ_ALE0_nHVHFxscs0/view?usp=share_link)**
+- **[Resume](https://drive.google.com/file/d/1-is69h9y24N5osWfxuldEtBfW2JKWcZq/view?usp=sharing)**
 
 
 ### Welcome to My Github
