@@ -1,4 +1,4 @@
-﻿<img src="https://drive.google.com/file/d/1031P8QtTAMhbYFaxDneN1aAs0iyiGOQC/view?usp=sharing" alt="drawing" width="200"/>
+﻿<img src="https://avatars.githubusercontent.com/u/5179732?s=96&v=4" alt="profile_pic" width="200"/>
 
 - **[LinkedIn](https://www.linkedin.com/in/mish-akopyan/)**
 
