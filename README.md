@@ -1,4 +1,4 @@
-﻿<img src="https://media.licdn.com/dms/image/D5635AQGQ6pYxVhpz4g/profile-framedphoto-shrink_400_400/0/1697559426290?e=1698184800&v=beta&t=0ShcTd5mc8Vn8G5R-8tQDi0pS52sF-sTGdp9PWgFZEY" alt="drawing" width="200"/>
+﻿<img src="https://drive.google.com/file/d/1031P8QtTAMhbYFaxDneN1aAs0iyiGOQC/view?usp=sharing" alt="drawing" width="200"/>
 
 - **[LinkedIn](https://www.linkedin.com/in/mish-akopyan/)**
 
