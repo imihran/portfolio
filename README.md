@@ -2,12 +2,16 @@
 
 - **[LinkedIn](https://www.linkedin.com/in/mish-akopyan/)**
 
-- **[Resume](https://drive.google.com/file/d/10UUnwSR4YQAddA-QQ3s_25u4GcLLhCyB/view?usp=sharing)**
+- **[Resume](https://drive.google.com/file/d/119JD-9Rns3E7Nj3_JHkJWYAOa62ijxJf/view?usp=sharing)**
 
 
 ### Welcome to My Github
 
 Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed a passion for data science and analytics.
+
+- **[Tiktok EDA and Hpyothesis Test - Build in Python](https://docs.google.com/spreadsheets/d/e/2PACX-1vSGATLkDaSs9x3OhYfOsgm8Xwic61eXyqG1NZ-Y40QHg4UZlk9L1XikWOVY0QGPi71KlRtVO_eUZUAE/pubchart?oid=1753950542&format=interactive)**
+
+Quick demo of EDA and hypothesis test using the Google’s PACE framework and python libraries such as  Pandas, NumPy, Seaborn, and Scipy
 
 - **[Automatic Reddit Analyzer and Visualizer - Build in Python](https://docs.google.com/spreadsheets/d/e/2PACX-1vSGATLkDaSs9x3OhYfOsgm8Xwic61eXyqG1NZ-Y40QHg4UZlk9L1XikWOVY0QGPi71KlRtVO_eUZUAE/pubchart?oid=1753950542&format=interactive)**
 
