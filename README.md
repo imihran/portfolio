@@ -11,7 +11,7 @@ Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed
 
 - **[Tiktok EDA and Hpyothesis Test - Build in Python](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok)** 
 
-<img src="/Public Project Files/images/Python.png" alt="logo" width="50"/>
+<img src="https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/images/Python.png" alt="logo" width="50"/>
 
 Quick demo of EDA and hypothesis test using the Google’s PACE framework and python libraries such as  Pandas, NumPy, Seaborn, and Scipy
 
