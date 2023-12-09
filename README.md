@@ -11,8 +11,6 @@ Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed
 
 - **[Tiktok EDA and Hpyothesis Test - Build in Python](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok)** 
 
-<img src="https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/images/Python.png" alt="logo" width="50"/>
-
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png){:width="50px"}
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/scipy.png){:width="50px"}
