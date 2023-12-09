@@ -38,8 +38,9 @@ This tool is designed to take server inventory as an input CSV or excel file typ
 
 - **Data Model**
 
-Built a data model (transaction/fraud/customer) using Excel Power Query to consolidate and visualize 10+ years of data from various reports. data had 60 + million rows and 100+ columns. No link is available because this is confidential information that has customer information.    
+Built a data model (transaction/fraud/customer) using Excel Power Query to consolidate and visualize 10+ years of data from various reports. data had 60 + million rows and 100+ columns.  
 
+![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/DataModel.png){:width="500px"}
  
 - **[Sunlight in Austin](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Cleaning%20Data%20and%20Analysis%20-%20Sunlight%20in%20Austin.ipynb)**
 
