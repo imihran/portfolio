@@ -10,6 +10,7 @@
 Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed a passion for data science and analytics.
 
 - **[Tiktok EDA and Hpyothesis Test - Build in Python](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok)** 
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png){:width="50px"}
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/scipy.png){:width="50px"}
@@ -18,16 +19,19 @@ Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed
 Quick demo of EDA and hypothesis test using the Google’s PACE framework and python libraries such as  Pandas, NumPy, Seaborn, and Scipy
 
 - **[Automatic Reddit Analyzer and Visualizer - Build in Python](https://docs.google.com/spreadsheets/d/e/2PACX-1vSGATLkDaSs9x3OhYfOsgm8Xwic61eXyqG1NZ-Y40QHg4UZlk9L1XikWOVY0QGPi71KlRtVO_eUZUAE/pubchart?oid=1753950542&format=interactive)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 
 This script connects to Reddit and Google API. Pulls the top 20 hot posts from the AITA subreddit counts the votes and pushes that info to google sheets – where it gets visualized. The script is automatically run every hour in a virtual server from AWS.
 
 - **[Power BI and Financial Data ](https://youtu.be/NEpZe8PdqW8?list=PLyIglp94oFaoDm_jpBwIuLI7JBrdkQlGq)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/powerbi.png){:width="50px"}
 
 Put together a large dataset of financial data and used Power BI to make a presentation. Video
 
 - **[Azure VM Mapping Tool - Build in Python](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 
 This tool is designed to take server inventory as an input CSV or excel file type and use the azure resource API to find the right virtual machine in order to find the respective pricing. 
@@ -38,26 +42,31 @@ Built a data model (transaction/fraud/customer) using Excel Power Query to conso
 
  
 - **[Sunlight in Austin](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Cleaning%20Data%20and%20Analysis%20-%20Sunlight%20in%20Austin.ipynb)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 
 In our data analysis process, the initial steps involve reading in the data files and re-assigning column names to ensure clarity and consistency. Once the data is organized, the focus shifts to cleaning and tidying the date and time-related information, ensuring it's in a format that's easy to work with. We also pay careful attention to cleaning the numeric columns, removing any outliers or discrepancies that might affect our analysis. Our exploratory data analysis encompasses both statistical and visual approaches. Statistically, we examine signal attributes such as the minimum, maximum, and median values, as well as signal variance, which provides insight into the data's spread. Moreover, we analyze the weather conditions, distinguishing between sunny and cloudy days. Visually, we explore weekly trends in temperature and visibility, daily hours of clear skies, and variables like heat, humidity, and the probability of encountering high temperatures. These comprehensive data analysis techniques help us extract valuable insights and patterns from the dataset, informing our decision-making processes.
  
 - **[ Olympic Medals](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Data%20Manipulation%20(Python)%20-%20Olympic%20Medals.ipynb)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 
 In this project we begin by transforming, extracting, and filtering data within a given data frame, a crucial step in isolating the pertinent information needed for analysis. This process is often followed by working with pandas indexes, including hierarchical indexes, which provide a structured framework for organizing and accessing the data effectively. Furthermore, we delve into data reshaping and restructuring, tailoring it to our specific analytical needs and improving its overall usability. Another key aspect of our methodology involves the strategic splitting of data into groups and categories, enabling more focused analysis and making it easier to draw valuable insights from the information at hand. These fundamental techniques help us to harness the full potential of our data for a wide range of applications and research endeavors.
  
 - **[Cryptocurrency](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Exploring%20the%20Bitcoin%20Cryptocurrency%20Market.ipynb)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
  
 Within this project, we meticulously conduct a step-by-step process encompassing data cleaning, analysis, and visualization. We adeptly utilize Jupyter Notebook to communicate our insights, ensuring a seamless flow of information and a coherent presentation of our findings.
 
 - **[Name Game Gender Prediction using sound](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Name%20Game_%20Gender%20Prediction%20using%20Sound.ipynb)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 
 This model is designed to discern phonetic similarity between two strings rather than relying solely on spelling equivalence. To achieve this, we employ the powerful technique of fuzzy name matching, which aids in identifying and quantifying the resemblance in pronunciation between the given strings.
  
 - **[Tidying Data](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Data%20shaping%20manipulating%20cleaning%20examples/Tidying%20Data%20-%20Life%20exepctancy.ipynb)**
+
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
 
 Example of data manipulation. We commence by meticulously examining the dataset to gain a comprehensive understanding of its content and structure. Subsequently, we evaluate and determine the most effective and efficient approach for cleaning the data, ensuring that it is free from errors, inconsistencies, and outliers. The next phase entails visualization, where we employ various graphical techniques to present the data in a clear and insightful manner, unveiling patterns and trends. Finally, after these critical steps have been executed, we conclude by exporting the refined data to a CSV file, making it easily accessible and ready for further analysis or sharing.
