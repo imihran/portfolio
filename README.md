@@ -13,7 +13,9 @@ Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed
 
 <img src="https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/images/Python.png" alt="logo" width="50"/>
 
-![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png)
+![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="50px"}
+![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png){:width="50px"}
+![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/scipy.png){:width="50px"}
 
 
 Quick demo of EDA and hypothesis test using the Google’s PACE framework and python libraries such as  Pandas, NumPy, Seaborn, and Scipy
