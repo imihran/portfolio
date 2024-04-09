@@ -9,6 +9,16 @@
 
 Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed a passion for data science and analytics.
 
+
+- **[Job Scrapper - Build in Python](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App)** 
+
+![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="30px"}
+![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png){:width="50px"}
+
+Leveraging Python and the Selenium library to scrape job listings from LinkedIn. The aim is to gather pertinent information such as salary details and recruiter data on a weekly basis. By automating this process, the project aims to streamline job market analysis and provide valuable insights into compensation trends and recruiter activity. This endeavor represents a fusion of programming skills and data extraction techniques to create a robust and efficient solution for staying abreast of job market dynamics.
+
+
+
 - **[Tiktok EDA and Hpyothesis Test - Build in Python](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok)** 
 
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="30px"}
