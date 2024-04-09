@@ -12,7 +12,7 @@ Hello, my name is Mihran Akopyan I go by Mish. Throughout my career, I developed
 
 - **[Job Scrapper - Build in Python](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App)** 
 
-![logo](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/images/Selenium.png){:width="30px"}
+![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Selenium.png){:width="30px"}
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png){:width="30px"}
 ![logo](https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png){:width="50px"}
 
