@@ -1,0 +1,1096 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "custom",
+              "cronExpression": "*/5 * * * *"
+            }
+          ]
+        },
+        "filters": {}
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -112,
+        1232
+      ],
+      "id": "3dd89266-0106-4c91-8b78-a96b82b82ddf",
+      "name": "Gmail Trigger",
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "inputText": "=Subject: {{ $json.Subject }}\nEmail body: {{ $json.snippet }}",
+        "categories": {
+          "categories": [
+            {
+              "category": "Promotions",
+              "description": "This is any email looking to sell me things, and it is not related to recruitment "
+            },
+            {
+              "category": "Social",
+              "description": "Any email from a social media site like YouTube or Facebook or Instagram"
+            },
+            {
+              "category": "Personal",
+              "description": "An email sent from a friend or a family members or something personal to me outside of work"
+            },
+            {
+              "category": "Sales",
+              "description": "Anything regarding clients sending over documents, sales, etc"
+            },
+            {
+              "category": "Recruitment",
+              "description": "Analyze the email subject and body to determine whether the message is related to recruitment or hiring. Classify as “Recruitment” if the content includes any of the following:  Mentions of open roles, job opportunities, interviews, or positions.  Language such as: “We’re hiring,” “Your background looks like a fit,” “I’d love to connect,” or “Came across your profile.”  Reference to resumes, LinkedIn, job titles, or interest in discussing your experience.  Any outreach suggesting a possible job, contract, or freelance engagement.  If the message does not reference employment or hiring in any way, do not classify as “Recruitment.”"
+            },
+            {
+              "category": "Receipts",
+              "description": "These are transaction emails for receipts"
+            },
+            {
+              "category": "Misc",
+              "description": "Anything that doesn't fall within the other categories"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1,
+      "position": [
+        -304,
+        1648
+      ],
+      "id": "1a14398b-3dc0-45cc-988f-6d1fd2dbdb16",
+      "name": "Text Classifier"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -192,
+        2032
+      ],
+      "id": "d4f1733d-08da-44ee-a66f-7fc6d64c1fb8",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "5afQbCOxhyy6c4j3",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "CATEGORY_PROMOTIONS"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        912,
+        144
+      ],
+      "id": "a2e1decb-74b9-4644-9656-aa68dd5d6e0f",
+      "name": "PROMOTIONS",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "CATEGORY_SOCIAL"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        912,
+        336
+      ],
+      "id": "b1e03e51-5360-4db1-9d7b-8bfda2b8b9f1",
+      "name": "Social",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "Label_10"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        912,
+        528
+      ],
+      "id": "4c20dd4d-754a-4dc5-a7e9-06cfe4ce8eca",
+      "name": "PERSONAL",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "CATEGORY_PROMOTIONS"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        912,
+        720
+      ],
+      "id": "44d38b25-e1bd-4722-9f8b-ce7924ceb90a",
+      "name": "SALES",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "Label_2718187249516046852"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        544,
+        1776
+      ],
+      "id": "7bcf3fde-dc90-41e1-8f1d-3319c1501eae",
+      "name": "RECRUITMENT",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nXSeBwn62ei7a15f",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "Label_18"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        752,
+        2576
+      ],
+      "id": "53be5373-8928-4d3a-815a-f12f9155eea4",
+      "name": "MISC",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "Label_11"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        752,
+        2400
+      ],
+      "id": "969294e9-24a5-4092-9fde-ef0efcb187c6",
+      "name": "RECEIPTS",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33"
+    },
+    {
+      "parameters": {
+        "operation": "markAsRead",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}"
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "258e14c6-e913-4b1c-b920-26966d4c2fb2",
+      "name": "Gmail",
+      "webhookId": "2d2d23a1-58e2-4eaf-b528-0198bb7513ec"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You're an intelligent bot at summarizing emails",
+              "role": "system"
+            },
+            {
+              "content": "=Subject: {{ $('Gmail Trigger').item.json.Subject }}\nEmail body: {{ $('Gmail Trigger').item.json.snippet }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        0,
+        224
+      ],
+      "id": "6eb24739-81b5-45cd-bc08-bbe18694b444",
+      "name": "OpenAI"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1J0OzZoD8ovlw2ox0KNOPWKXE3XCl5xbCISzuLyeqkBE",
+          "mode": "list",
+          "cachedResultName": "Email Summary n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1J0OzZoD8ovlw2ox0KNOPWKXE3XCl5xbCISzuLyeqkBE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1J0OzZoD8ovlw2ox0KNOPWKXE3XCl5xbCISzuLyeqkBE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ID": "={{ $('Gmail Trigger').item.json.id }}",
+            "Date": "={{ $now }}",
+            "Subject Line": "={{ $('Gmail Trigger').item.json.Subject }}",
+            "Summary": "={{ $json.message.content }}",
+            "Snippet": "={{ $('Gmail Trigger').item.json.threadId }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Subject Line",
+              "displayName": "Subject Line",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Summary",
+              "displayName": "Summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Snippet",
+              "displayName": "Snippet",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        400,
+        224
+      ],
+      "id": "e07ffb09-7c79-41b6-8cc3-2f3e08c16720",
+      "name": "Google Sheets"
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "={{ $json.message.content.subject_line }}",
+        "message": "={{ $json.message.content.email_body }}",
+        "options": {
+          "threadId": "={{ $('Gmail Trigger').item.json.threadId }}",
+          "sendTo": "={{ $('Gmail Trigger').item.json.From }}"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        400,
+        448
+      ],
+      "id": "552a2d4b-bac6-4d56-b5ac-aa329a8b19b1",
+      "name": "Gmail1",
+      "webhookId": "86efad7a-a4f4-432f-a990-db236b59161f"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You're an intelligent bot at replying to emails. Please sign off on all emails as follows:\n\"Best,\nJono\"\n\nAlso separate paragraphs by lines breaks.",
+              "role": "system"
+            },
+            {
+              "content": "=Heres the email to reply to:\nSubject: {{ $('Gmail Trigger').item.json.Subject }}\nEmail body: {{ $('Gmail Trigger').item.json.snippet }}\nThis email is from: {{ $('Gmail Trigger').item.json.From }}"
+            },
+            {
+              "content": "Please format the data in JSON format:\n{\n\"subject_line\": \"\",\n\"email_body\": \"\"\n}",
+              "role": "assistant"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        0,
+        448
+      ],
+      "id": "00214e76-6271-41b1-b41e-881d3929a65d",
+      "name": "OpenAI1"
+    },
+    {
+      "parameters": {
+        "sendTo": "=jccatliff+23@gmail.com",
+        "subject": "=FORWARDED: {{ $('Gmail Trigger').item.json.Subject }}",
+        "message": "=FORWARDED: {{ $('Gmail Trigger').item.json.snippet }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        16,
+        3328
+      ],
+      "id": "57727b72-cf54-47c1-9ec5-95d15238080a",
+      "name": "Gmail2",
+      "webhookId": "86efad7a-a4f4-432f-a990-db236b59161f"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You're an intelligent bot at replying to sales emails. Please sign off on all emails as follows:\n\"Best,\nJono\"\n\nAlso separate paragraphs by lines breaks.",
+              "role": "system"
+            },
+            {
+              "content": "=Heres the email to reply to:\nSubject: {{ $('Gmail Trigger').item.json.Subject }}\nEmail body: {{ $('Gmail Trigger').item.json.snippet }}\nThis email is from: {{ $('Gmail Trigger').item.json.From }}"
+            },
+            {
+              "content": "Please format the data in JSON format:\n{\n\"subject_line\": \"\",\n\"email_body\": \"\"\n}",
+              "role": "assistant"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -16,
+        2720
+      ],
+      "id": "ed1e2623-32de-450e-b8dd-24a81d734a08",
+      "name": "OpenAI2"
+    },
+    {
+      "parameters": {
+        "operation": "reply",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "message": "={{ $json.message.content.email_body }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        384,
+        2720
+      ],
+      "id": "6bcb672c-4255-41c8-b3f8-6ab34a83fe7e",
+      "name": "Gmail3",
+      "webhookId": "f2533aba-c489-4dd6-aaae-3f341ea09f0c"
+    },
+    {
+      "parameters": {
+        "operation": "reply",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "message": "={{ $json.message.content.email_body }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1744,
+        2336
+      ],
+      "id": "4fc5e31c-9c3a-4e97-916d-bd07c182dade",
+      "name": "Reply to a message",
+      "webhookId": "f2533aba-c489-4dd6-aaae-3f341ea09f0c"
+    },
+    {
+      "parameters": {
+        "operation": "markAsRead",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}"
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1888,
+        1424
+      ],
+      "id": "6163b4f7-4c73-4e38-a76b-d03d19269e5f",
+      "name": "Mark a message as read",
+      "webhookId": "05c5cb8c-a6c8-4754-ab0f-a7576f51749b",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nXSeBwn62ei7a15f",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "={{ $json.message.content.subject_line }}",
+        "emailType": "html",
+        "message": "={{ $json.message.content.email_body }}",
+        "options": {
+          "threadId": "={{ $('Get many messages_inbox_unread').item.json.threadId }}",
+          "sendTo": "={{\n  $('Get many messages_inbox_unread').item.json.From && $('Get many messages_inbox_unread').item.json.From.includes('@')\n    ? ($('Get many messages_inbox_unread').item.json.From.includes('<')\n        ? $('Get many messages_inbox_unread').item.json.From.match(/<([^>]+)>/)?.[1] || ''\n        : $('Get many messages_inbox_unread').item.json.From.trim())\n    : ''\n}}\n"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1488,
+        1472
+      ],
+      "id": "57372532-6462-4f67-96eb-8b2d8f62e35b",
+      "name": "Create a draft",
+      "webhookId": "86efad7a-a4f4-432f-a990-db236b59161f",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nXSeBwn62ei7a15f",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 100,
+        "filters": {
+          "q": "in:inbox newer_than:180d"
+        }
+      },
+      "id": "e76b15fc-9b22-4667-9043-cd406f627418",
+      "name": "Fetch Emails",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        0,
+        2992
+      ],
+      "webhookId": "38ef913d-6c5b-4b1c-bee1-c48b8cf158f7"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Recruiter",
+              "value": "={{ $json[\"From\"].match(/^(.*?)\\s</)[1] }}\n"
+            },
+            {
+              "name": "Email",
+              "value": "={{\n  $('Get many messages_inbox_unread').item.json.From && $('Get many messages_inbox_unread').item.json.From.includes('@')\n    ? ($('Get many messages_inbox_unread').item.json.From.includes('<')\n        ? $('Get many messages_inbox_unread').item.json.From.match(/<([^>]+)>/)?.[1] || ''\n        : $('Get many messages_inbox_unread').item.json.From.trim())\n    : ''\n}}\n"
+            },
+            {
+              "name": "subject",
+              "value": "={{ $json.Subject }}"
+            },
+            {
+              "name": "snippet",
+              "value": "={{ $json.snippet }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b37f05f4-5f83-46e1-b5e8-6c9ada92b0d4",
+      "name": "Extract Sender Email",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        192,
+        2400
+      ]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "chatgpt-4o-latest",
+          "mode": "list",
+          "cachedResultName": "CHATGPT-4O-LATEST"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "Determine if the email is from a recruiter based on subject and snippet. Respond only with yes or no.",
+              "role": "system"
+            },
+            {
+              "content": "=Subject: {{ $json.subject }}\nSnippet: {{ $json.snippet }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "id": "d91caad3-76f3-4965-afad-4b55161cf731",
+      "name": "Classify as Recruiter",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        400,
+        2992
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1K0STzIX29F6K4CgQczFvM8hdL-Jv30Z8kOHyt6zblrc",
+          "mode": "list",
+          "cachedResultName": "Recruiter_List",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K0STzIX29F6K4CgQczFvM8hdL-Jv30Z8kOHyt6zblrc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "List_1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K0STzIX29F6K4CgQczFvM8hdL-Jv30Z8kOHyt6zblrc/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "senderEmail",
+              "displayName": "senderEmail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "subject",
+              "displayName": "subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "snippet",
+              "displayName": "snippet",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "6055c0d2-dca8-48b7-9bc8-e9d2d930b8a5",
+      "name": "Save to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1472,
+        2064
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "3OF0hIJDdqsOMPXf",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": " Write a concise, professional reply to a recruiter email. The reply should include the following elements:\n\nHTML format\n\nA brief thank-you for the outreach and the potential opportunity.\n\nSpecific mention of a detail or two from the recruiter's message to show attentiveness.\n\nA clear expression of interest in learning more about the role—especially around:\n\nThe technical scope,\n\nThe team structure,\n\nThe growth potential.\n\nA statement that I’m actively evaluating new opportunities aligned with my long-term goals. Specifically:\n\nI'm currently an senior Business Intelligence Engineer at Amazon, with a strong track record of leveraging data to drive business impact. \n\nShare my github link https://imihran.github.io/portfolio/ and mentioned that resume can be downloaded from there.\n\nI’m exploring roles with deeper technical scope—particularly those focused on data engineering or software development.\n\nMy long-term focus is on moving beyond BIE into more engineering-centric roles that offer career growth, ownership, and meaningful technical challenges.\n\nA request for key details, including:\n\nThe team’s mission,\n\nCurrent technical challenges,\n\nTech stack in use,\n\nHow success is measured in this role.\n\nClearly state that for contract opportunities, I’m only considering roles that offer a minimum hourly rate of $95/hour or higher, depending on scope and fit.\n\nTone should be direct, curious, and efficient—no fluff, no buzzword salad.\n\nBreak into separate paragraphs with line breaks.\n\nSign off as: \"On behalf of Mihran - Mihran's AI assistant\"",
+              "role": "system"
+            },
+            {
+              "content": "=Heres the email to reply to:\nSubject: {{ $('Get many messages_inbox_unread').item.json.Subject }}\nEmail body: {{ $('Get many messages_inbox_unread').item.json.snippet }}\nThis email is from: {{ $('Get many messages_inbox_unread').item.json.From }}",
+              "role": "assistant"
+            },
+            {
+              "content": "Please format the data in JSON format:\n{\n\"subject_line\": \"\",\n\"email_body\": \"\"\n}",
+              "role": "assistant"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        928,
+        1504
+      ],
+      "id": "95252b4d-ad18-400a-92c8-9cf833ac4bf3",
+      "name": "Message a model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "5afQbCOxhyy6c4j3",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "reply",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "message": "={{ $json.message.content.email_body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1504,
+        1680
+      ],
+      "id": "74e31667-f621-4b8e-821f-6b9548c5fe67",
+      "name": "Reply to a message1",
+      "webhookId": "86efad7a-a4f4-432f-a990-db236b59161f",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nXSeBwn62ei7a15f",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "filters": {
+          "labelIds": [
+            "UNREAD",
+            "INBOX"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -656,
+        1712
+      ],
+      "id": "391298d5-3da4-4fb2-a19b-64c64f52d739",
+      "name": "Get many messages_inbox_unread",
+      "webhookId": "e2b47bff-f78a-4f61-b150-967f45ad21dc",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nXSeBwn62ei7a15f",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "labelIds": [
+            "UNREAD",
+            "INBOX"
+          ],
+          "receivedAfter": "2025-08-12T00:00:00",
+          "sender": "in:inbox -from:mihran.akopyan@gmail.com -from:calendar-notification@google.com -from:sararayamajhi.sr@gmail.com -from:sarah.rayamajhi12@gmail.com"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -656,
+        1952
+      ],
+      "id": "8b42cef5-ad05-48ed-82a4-87b55d276435",
+      "name": "Get many messages_all",
+      "webhookId": "e2b47bff-f78a-4f61-b150-967f45ad21dc",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nXSeBwn62ei7a15f",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Recruiter",
+              "value": "={{ $('Get many messages_inbox_unread').item.json.From.split(\"<\")[0].trim() }}"
+            },
+            {
+              "name": "Email",
+              "value": "={{\n  $('Get many messages_inbox_unread').item.json.From && $('Get many messages_inbox_unread').item.json.From.includes('@')\n    ? ($('Get many messages_inbox_unread').item.json.From.includes('<')\n        ? $('Get many messages_inbox_unread').item.json.From.match(/<([^>]+)>/)?.[1] || ''\n        : $('Get many messages_inbox_unread').item.json.From.trim())\n    : ''\n}}\n"
+            },
+            {
+              "name": "subject",
+              "value": "={{ $('Get many messages_inbox_unread').item.json.Subject }}"
+            },
+            {
+              "name": "snippet",
+              "value": "={{ $('Get many messages_inbox_unread').item.json.snippet }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f48624cb-9cc6-4b2c-ac58-6f796b37c62e",
+      "name": "Extract Sender Email1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        960,
+        2160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get many messages_inbox_unread').item.json.id }}",
+        "labelIds": [
+          "Label_2718187249516046852"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        640,
+        2288
+      ],
+      "id": "6e3009a7-b380-478f-91f5-088df794eae2",
+      "name": "RECRUITMENT1",
+      "webhookId": "f546eda8-46ce-42e3-a0de-047ee73a9b33",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nXSeBwn62ei7a15f",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Classifier": {
+      "main": [
+        [
+          {
+            "node": "PROMOTIONS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Social",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PERSONAL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SALES",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "RECRUITMENT",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "RECEIPTS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MISC",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI1": {
+      "main": [
+        [
+          {
+            "node": "Gmail1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI2": {
+      "main": [
+        [
+          {
+            "node": "Gmail3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RECRUITMENT": {
+      "main": [
+        [
+          {
+            "node": "Message a model1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Extract Sender Email1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a draft": {
+      "main": [
+        [
+          {
+            "node": "Mark a message as read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Sender Email": {
+      "main": [
+        []
+      ]
+    },
+    "Message a model1": {
+      "main": [
+        [
+          {
+            "node": "Create a draft",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Reply to a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many messages_inbox_unread": {
+      "main": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many messages_all": {
+      "main": [
+        []
+      ]
+    },
+    "Extract Sender Email1": {
+      "main": [
+        [
+          {
+            "node": "Save to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RECRUITMENT1": {
+      "main": [
+        []
+      ]
+    },
+    "Reply to a message1": {
+      "main": [
+        [
+          {
+            "node": "Mark a message as read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ceb80706-7858-40bc-bcb4-20c07169fcaa",
+  "meta": {
+    "instanceId": "7e5a1b308c5ab75086b0b86850fd005395a99732869f1cc1c47798e4d85d5eeb"
+  },
+  "id": "sn0kKgZMv54vA7lB",
+  "tags": []
+}
