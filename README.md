@@ -23,18 +23,14 @@ Senior Data Engineer with 12+ years at Amazon, Microsoft, and Redfin. I design a
 
 A selection of projects that demonstrate practical data work and automation.
 
-- Job Scraper (Python + Selenium)
-
-   Link: https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App
+- [Job Scraper (Python + Selenium)](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App)
 
    <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Selenium.png" alt="Selenium" width="30"/> <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png" alt="Python" width="30"/> <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png" alt="Pandas" width="50"/>
 
 
    Automated job postings collection (LinkedIn) with scheduled ingestion and Google Sheets export for trend analysis.
 
-- TikTok EDA & Hypothesis Testing (Notebooks)
-
-   Link: https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok
+- [TikTok EDA & Hypothesis Testing (Notebooks)](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok)
 
    EDA, visualization and statistical tests using Pandas, Seaborn and SciPy.
 
@@ -42,13 +38,11 @@ A selection of projects that demonstrate practical data work and automation.
 
    Interactive chart / spreadsheet example hosted via Google Sheets. Script pulls top posts from r/AITA and updates metrics hourly on an AWS VM.
 
-- Azure VM Mapping Tool (inventory → pricing)
-
-   Link: https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool
+- [Azure VM Mapping Tool (inventory → pricing)](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool)
 
    Maps on-prem inventory to Azure SKUs to estimate monthly costs using the Azure Resource API.
 
-Other notebooks: Olympic Medals analysis, Cryptocurrency market exploration, Sound-based name gender prediction, Sunlight in Austin (data cleaning & EDA), and more — see `Public Project Files/`.
+Other notebooks: Olympic Medals analysis, Cryptocurrency market exploration, Sound-based name gender prediction, Sunlight in Austin (data cleaning & EDA), and more — see [Public Project Files/](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files).
 
 ## How to explore this repo
 
@@ -56,7 +50,7 @@ Other notebooks: Olympic Medals analysis, Cryptocurrency market exploration, Sou
 2. Open notebooks on GitHub or run locally with Jupyter.
 3. Projects that use external APIs require credentials; follow each project's README for setup (environment variables or config files).
 
-Quick link: https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files
+[Quick link:](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files)
 
 ## Tech & Tools
 
@@ -72,8 +66,6 @@ Numerous course certificates and statements of accomplishment (Data Science, Pyt
 
 ## Contact
 
-Interested in collaborating or want to ask about a project? Connect on LinkedIn: https://www.linkedin.com/in/mish-akopyan/
+Interested in collaborating or want to ask about a project? Connect on [LinkedIn:](https://www.linkedin.com/in/mish-akopyan/)
 
 ---
-
-Made with ❤️ — Mihran (Mish)
