@@ -1,4 +1,4 @@
-﻿<font size="6">**Mihran "Mish" Akopyan — Data Science Portfolio**</font>
+﻿<font size="6">**Mihran "Mish" Akopyan — Data Portfolio**</font>
 
 <img src="https://avatars.githubusercontent.com/u/5179732?s=96&v=4" alt="profile_pic" width="120" align="right"/>
 
