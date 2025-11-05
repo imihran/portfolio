@@ -23,6 +23,11 @@ Senior Data Engineer with 12+ years at Amazon, Microsoft, and Redfin. I design a
 
 A selection of projects that demonstrate practical data work and automation.
 
+
+- [Clickstream Analytics Data Pipeline – Case Study](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Clickstream%20Analytics%20Data%20Pipeline%20%E2%80%93%20Case%20Study.md)
+
+   End-to-end design of a **serverless, cloud-native data pipeline** for processing large-scale clickstream data.
+
 - [Job Scraper (Python + Selenium)](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App)
 
    <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Selenium.png" alt="Selenium" width="30"/> <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png" alt="Python" width="30"/> <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png" alt="Pandas" width="50"/>
