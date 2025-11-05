@@ -47,15 +47,15 @@ The proposed architecture builds a **modular, fault-tolerant data lakehouse pipe
 ---
 
 ## 🧭 Project Flow
-1. **Part 1 – Data Ingestion & Cataloging**  
+1. [**Part 1 – Data Ingestion & Cataloging**](#part-1--data-ingestion--cataloging)  
    Define partitioning, schema registration, and Athena optimization.  
-2. **Part 2 – Data Transformation**  
+2. [**Part 2 – Data Transformation**](#part-2--data-transformation)    
    Normalize raw JSON → Parquet star schema (fact_clicks, dim_users).  
-3. **Part 3 – Data Warehouse Integration**  
+3. [**Part 3 – Data Warehouse Integration**](#part-3--data-warehouse-integration)  
    Integrate processed data into Redshift (or Spectrum external tables).  
-4. **Part 4 – Event-Driven Component**  
+4. [**Part 4 – Event-Driven Component**](#part-4--event-driven-component)  
    Trigger workflows for key events using EventBridge + Lambda + SNS.  
-5. **Part 5 – Non-Functional Considerations**  
+5. [**Part 5 – Non-Functional Considerations**](#part-5--non-functional-considerations)  
    Implement security, cost optimization, quality checks, and IaC automation.  
 
 ---
@@ -68,4 +68,120 @@ It is designed to evolve: from simple hourly JSON ingestion to full-fledged real
 
 ## 💡 Reflection Rule
 Every strong data platform starts with clear **separation of layers** — raw, processed, curated — and builds upward from **secure, cost-efficient foundations**.
+
+# 📦 Part 1 – Data Ingestion & Cataloging
+<a name="part-1--data-ingestion--cataloging"></a>
+
+## 🎯 Objective
+Design an ingestion and cataloging layer for raw clickstream JSON data landing in:
+s3://company-raw/clickstream/YYYY/MM/DD/HH/
+
+---
+
+## 🧱 S3 Organization & Partitioning
+
+**Proposed S3 Structure**
+s3://company-raw/clickstream/
+    └── year=YYYY/
+        └── month=MM/
+            └── day=DD/
+                └── hour=HH/
+                    └── part-0000.json
+
+**Rationale**
+1. Partitioning by `year`, `month`, `day`, and `hour` ensures efficient time-based queries.  
+2. Aligns with Glue and Athena partition pruning for faster performance.  
+3. Keeps data lake compatible with downstream Parquet writes and lifecycle rules.
+
+**Best Practices**
+- Store each ingestion batch under a unique prefix (e.g., hour).
+- Avoid small files by merging JSON objects before writing (improves Athena performance).
+- Use a consistent schema and naming convention to simplify Glue crawlers.
+
+---
+
+## 🧩 Glue Data Catalog & Table Schema
+
+**Glue Table Definition Example**
+Database: clickstream_raw  
+Table: click_events_raw  
+Location: s3://company-raw/clickstream/
+
+Columns:
+    user_id           string
+    session_id        string
+    event_type        string
+    event_timestamp   timestamp
+    device_type       string
+    page_url          string
+    referrer_url      string
+    metadata          map<string, string>
+
+Partitions:
+    year              int
+    month             int
+    day               int
+    hour              int
+
+Storage format: JSON  
+Compression: None (raw stage)  
+
+**Create Table (SQL for Athena/Glue Catalog Registration)**
+CREATE EXTERNAL TABLE clickstream_raw.click_events_raw (
+    user_id string,
+    session_id string,
+    event_type string,
+    event_timestamp timestamp,
+    device_type string,
+    page_url string,
+    referrer_url string,
+    metadata map<string,string>
+)
+PARTITIONED BY (year int, month int, day int, hour int)
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+LOCATION 's3://company-raw/clickstream/';
+
+**Adding Partitions**
+ALTER TABLE clickstream_raw.click_events_raw
+ADD PARTITION (year=2024, month=11, day=04, hour=15)
+LOCATION 's3://company-raw/clickstream/2024/11/04/15/';
+
+---
+
+## 🔍 Athena Query Considerations
+
+1. **Partition Pruning**
+   Use WHERE filters on partition keys:
+   SELECT * FROM clickstream_raw.click_events_raw
+   WHERE year=2024 AND month=11 AND day=04;
+
+2. **Cost Control**
+   - Each query scans only relevant partitions → reduces S3 read cost.
+   - Avoid SELECT *; project only required columns.
+
+3. **Schema Drift**
+   - Athena infers schema from JSON; inconsistent JSON keys can cause nulls.
+   - Mitigate via schema validation before loading to raw bucket.
+
+4. **Performance**
+   - Use `CTAS` (CREATE TABLE AS SELECT) to convert large JSONs to columnar Parquet in next stage.
+   - Partition discovery can be automated using Glue Crawler or `MSCK REPAIR TABLE`.
+
+---
+
+## 🧠 Summary of Design Choices
+
+| Aspect | Decision | Reason |
+|--------|-----------|--------|
+| Partitioning | Year/Month/Day/Hour | Time-based filtering & efficient Athena queries |
+| File Format | JSON | Retain raw fidelity |
+| Catalog | Glue Data Catalog | Central schema registry for Athena & ETL jobs |
+| Query Engine | Athena | Serverless, cost-efficient data exploration |
+| Governance | S3 IAM + KMS encryption | Security & compliance |
+
+---
+
+## 💡 Reflection Rule
+Always partition S3 data by **query access patterns** (typically time-based) before cataloging — this single step saves 80–90% of Athena scan costs.
+
 
