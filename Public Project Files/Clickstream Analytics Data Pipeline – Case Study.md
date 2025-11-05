@@ -81,12 +81,14 @@ s3://company-raw/clickstream/YYYY/MM/DD/HH/
 ## 🧱 S3 Organization & Partitioning
 
 **Proposed S3 Structure**
+```text
 s3://company-raw/clickstream/
     └── year=YYYY/
         └── month=MM/
             └── day=DD/
                 └── hour=HH/
                     └── part-0000.json
+```
 
 **Rationale**
 1. Partitioning by `year`, `month`, `day`, and `hour` ensures efficient time-based queries.  
