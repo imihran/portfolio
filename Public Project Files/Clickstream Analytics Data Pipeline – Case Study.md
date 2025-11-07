@@ -66,7 +66,7 @@ It is designed to evolve: from simple hourly JSON ingestion to full-fledged real
 
 ---
 
-## 💡 Reflection Rule
+## 💡 Key Takeaways
 Every strong data platform starts with clear **separation of layers** — raw, processed, curated — and builds upward from **secure, cost-efficient foundations**.
 
 <a name="part-1--data-ingestion--cataloging"></a>
@@ -109,6 +109,7 @@ Database: clickstream_raw
 Table: click_events_raw  
 Location: s3://company-raw/clickstream/
 
+```sql
 Columns:
     user_id           string
     session_id        string
@@ -124,10 +125,11 @@ Partitions:
     month             int
     day               int
     hour              int
-
+```
 Storage format: JSON  
 Compression: None (raw stage)  
 
+```sql
 **Create Table (SQL for Athena/Glue Catalog Registration)**
 CREATE EXTERNAL TABLE clickstream_raw.click_events_raw (
     user_id string,
@@ -147,7 +149,7 @@ LOCATION 's3://company-raw/clickstream/';
 ALTER TABLE clickstream_raw.click_events_raw
 ADD PARTITION (year=2024, month=11, day=04, hour=15)
 LOCATION 's3://company-raw/clickstream/2024/11/04/15/';
-
+```
 ---
 
 ## 🔍 Athena Query Considerations
@@ -183,7 +185,7 @@ LOCATION 's3://company-raw/clickstream/2024/11/04/15/';
 
 ---
 
-## 💡 Reflection Rule
+## 💡 Kay Takeaways
 Always partition S3 data by **query access patterns** (typically time-based) before cataloging — this single step saves 80–90% of Athena scan costs.
 
 <a name="part-2--data-transformation"></a>
@@ -203,11 +205,13 @@ and store it in S3 as **Parquet (compressed, partitioned)** for downstream analy
 s3://company-raw/clickstream/year=YYYY/month=MM/day=DD/hour=HH/
 
 **Output**
+```text
 s3://company-processed/clickstream/
     ├── fact_clicks/year=YYYY/month=MM/day=DD/
     └── dim_users/
-
+```
 **Schema Overview**
+```sql
 fact_clicks
     click_id            string
     user_id             string
@@ -227,7 +231,7 @@ dim_users
     signup_date         date
     device_preferences  string
     last_seen           timestamp
-
+```
 **Partitioning Strategy**
 - fact_clicks: Partition by year, month, day  
 - dim_users: Not partitioned (small cardinality, frequent lookups)  
@@ -249,7 +253,7 @@ dim_users
 ---
 
 ## 🐍 PySpark Transformation Code (Sample)
-
+```python
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, year, month, dayofmonth, monotonically_increasing_id
 
@@ -283,7 +287,7 @@ fact_clicks_df.write.mode("overwrite") \
 
 dim_users_df.write.mode("overwrite") \
     .parquet("s3://company-processed/clickstream/dim_users/")
-
+```
 ---
 
 ## ⚙️ Alternative: AWS Lambda (for lightweight transformations)
@@ -291,7 +295,7 @@ dim_users_df.write.mode("overwrite") \
 Use Lambda + Python when:
 - Volume is small (few MBs/hour)
 - Transformation is JSON normalization or flattening
-
+```python
 Example pseudocode:
 def lambda_handler(event, context):
     for record in event['Records']:
@@ -306,7 +310,7 @@ def lambda_handler(event, context):
             Key=f"clickstream/{normalized['timestamp'][:10]}/{uuid4()}.json",
             Body=json.dumps(normalized)
         )
-
+```
 ---
 
 ## 🧮 Performance & Scaling Considerations
@@ -322,7 +326,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 💡 Reflection Rule
+## 💡 Key Takeaway
 Always transform raw data into **columnar + partitioned** structures early — the combination of Parquet and date-based partitions is the backbone of every efficient data lake.
 
 <a name="part-3--data-warehouse-integration"></a>
@@ -334,13 +338,13 @@ Load the **processed Parquet data** from S3 into Amazon **Redshift** (or query t
 ---
 
 ## 🧩 Integration Architecture
-
+```text
 S3 (Processed Data)
     ↓
 Redshift Spectrum External Schema (read-only)
     ↓
 Redshift Internal Tables (optional for high-performance analytics)
-
+``````
 **Workflow**
 1. Glue catalog registers processed Parquet data (fact_clicks and dim_users).
 2. Redshift Spectrum uses the same catalog to create external tables.
@@ -352,6 +356,7 @@ Redshift Internal Tables (optional for high-performance analytics)
 ## ⚙️ Redshift External Table Definition
 
 External Schema
+```sql
 CREATE EXTERNAL SCHEMA spectrum_clickstream
 FROM DATA CATALOG
 DATABASE 'clickstream_processed'
@@ -382,11 +387,11 @@ CREATE EXTERNAL TABLE spectrum_clickstream.dim_users (
 )
 STORED AS PARQUET
 LOCATION 's3://company-processed/clickstream/dim_users/';
-
+```
 ---
 
 ## 🧮 Analytical Query Example
-
+```sql
 SELECT
     u.country,
     c.user_id,
@@ -398,7 +403,7 @@ JOIN spectrum_clickstream.dim_users AS u
 WHERE c.year = 2024 AND c.month = 11
 GROUP BY 1, 2, 4
 ORDER BY clicks_per_user DESC;
-
+```
 **Purpose**
 Aggregates click counts per user per day, joining fact and dimension data directly from S3 using Spectrum.
 
@@ -431,10 +436,11 @@ Aggregates click counts per user per day, joining fact and dimension data direct
    FORMAT AS PARQUET;
 
 2. **CTAS Pattern**
+```sql
    CREATE TABLE fact_clicks_staging AS
    SELECT * FROM spectrum_clickstream.fact_clicks
    WHERE year=2024 AND month=11;
-
+```
 ---
 
 ## 🧠 Summary of Design Choices
@@ -449,7 +455,7 @@ Aggregates click counts per user per day, joining fact and dimension data direct
 
 ---
 
-## 💡 Reflection Rule
+## 💡 Key Takeaway
 Use **Spectrum for scalability, Redshift for speed** — this hybrid layering gives you both agility and performance in modern analytical architectures.
 
 <a name="part-4--event-driven-component"></a>
@@ -474,7 +480,7 @@ flow:
 ---
 
 ## 🏗️ Architecture Diagram (text sketch)
-
+```text
 [User Browser]
    ↓
 Clickstream JSON
@@ -489,11 +495,11 @@ S3 Bucket: company-raw/clickstream
       ↳ Option 2: Publish to SNS topic "PurchaseAlerts"
       ↓
    [Downstream consumer or dashboard]
-
+```
 ---
 
 ## ⚙️ EventBridge Rule Example
-
+```text
 Event Pattern JSON:
 {
   "source": ["aws.s3"],
@@ -507,13 +513,13 @@ Event Pattern JSON:
     }
   }
 }
-
+```
 To detect only purchase events, Lambda performs filtering logic based on event content.
 
 ---
 
 ## 🧠 Lambda Function Pseudocode
-
+```python
 import json, boto3
 
 s3 = boto3.client("s3")
@@ -546,7 +552,7 @@ def lambda_handler(event, context):
             )
 
     return {"status": "processed"}
-
+```
 ---
 
 ## 🧮 Scalability & Reliability Considerations
@@ -576,7 +582,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 💡 Reflection Rule
+## 💡 Key Takeaway
 Design event-driven pipelines around **specific business triggers** — start small (Lambda + EventBridge) and evolve toward full decoupled streaming systems only when scale demands it.
 
 # ⚡ Part 4 – Event-Driven Component
@@ -630,10 +636,10 @@ flow:
 └────────────┬─────────────┘
      ┌───────┴────────┐
      ▼                ▼
-┌──────────────┐   ┌─────────────────┐
+┌───────────────┐   ┌─────────────────┐
 │ S3 (Processed)│   │ SNS: Alerts/Msg │
 │ purchases/    │   │ PurchaseAlerts  │
-└──────────────┘   └─────────────────┘
+└───────────────┘   └─────────────────┘
 ```
 ---
 
@@ -658,7 +664,7 @@ To detect only purchase events, Lambda performs filtering logic based on event c
 ---
 
 ## 🧠 Lambda Function Pseudocode
-
+```python
 import json, boto3
 
 s3 = boto3.client("s3")
@@ -691,7 +697,7 @@ def lambda_handler(event, context):
             )
 
     return {"status": "processed"}
-
+```
 ---
 
 ## 🧮 Scalability & Reliability Considerations
@@ -721,7 +727,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 💡 Reflection Rule
+## 💡 Key Takeaway
 Design event-driven pipelines around **specific business triggers** — start small (Lambda + EventBridge) and evolve toward full decoupled streaming systems only when scale demands it.
 
 <a name="part-5--non-functional-considerations"></a>
@@ -815,7 +821,7 @@ Outline key non-functional requirements — including **security**, **cost optim
 ---
 
 ## 🧱 Infrastructure as Code (Terraform)
-
+```python
 ### HCL Outline
 main.tf
     provider "aws" {
@@ -866,7 +872,7 @@ main.tf
       alarm_description   = "Alert on Lambda errors"
       alarm_actions       = [aws_sns_topic.alerts.arn]
     }
-
+```
 ---
 
 ## 🧠 Design Philosophy
@@ -877,7 +883,7 @@ main.tf
 
 ---
 
-## 💡 Reflection Rule
+## 💡 Key Takeaway
 Non-functional excellence is invisible until it fails — bake **security, cost control, data quality, and observability** into the design from day one, not after launch.
 
 # 🏁 Conclusion – Clickstream Analytics Data Pipeline
@@ -911,6 +917,6 @@ This architecture empowers analysts, product managers, and leadership teams to:
 
 ---
 
-## 💡 Final Reflection Rule
+## 💡 Final Key Takeaway
 Great data architectures aren’t just pipelines — they’re **living systems** that evolve with scale, automation, and trust.  
 Build for **clarity**, enforce **governance**, and optimize for **future flexibility**, not just immediate success.
