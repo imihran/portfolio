@@ -23,6 +23,9 @@ Senior Data Engineer with 12+ years at Amazon, Microsoft, and Redfin. I design a
 
 A selection of projects that demonstrate practical data work and automation.
 
+- [Customer360 Platform (WIP)](https://github.com/imihran/customer360)
+   
+   Customer360 is a real-time, AI-augmented data platform built to unify customer data, events, and transactions across multiple source systems — enabling 360° analytics and personalization at scale.
 
 - [Clickstream Analytics Data Pipeline – Case Study](https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Clickstream%20Analytics%20Data%20Pipeline%20%E2%80%93%20Case%20Study.md)
 
