@@ -1,0 +1,62 @@
+[
+  {
+    "id": "clickstream-pipeline",
+    "title": "Clickstream Analytics Data Pipeline",
+    "summary": "End-to-end serverless AWS data pipeline for processing large-scale e-commerce clickstream data. Star schema design, PySpark transformations, Redshift Spectrum analytics, and event-driven alerting.",
+    "stack": ["AWS", "S3", "Glue", "Athena", "Redshift", "Lambda", "PySpark", "Terraform"],
+    "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Clickstream%20Analytics%20Data%20Pipeline%20%E2%80%93%20Case%20Study.md",
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "job-scraper",
+    "title": "LinkedIn Job Scraper",
+    "summary": "Automated job postings collection from LinkedIn using Selenium, with salary extraction, pagination handling, and CSV export for trend analysis.",
+    "stack": ["Python", "Selenium", "BeautifulSoup", "Pandas", "Tkinter"],
+    "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App",
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "tiktok-eda",
+    "title": "TikTok EDA & Hypothesis Testing",
+    "summary": "Exploratory data analysis and statistical hypothesis testing on TikTok claim verification data using Pandas, Seaborn, and SciPy.",
+    "stack": ["Python", "Pandas", "Seaborn", "SciPy", "Matplotlib"],
+    "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok",
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "reddit-analyzer",
+    "title": "Automatic Reddit Analyzer",
+    "summary": "Script that pulls top posts from r/AITA, analyzes comment sentiment votes, calculates an 'Asshole Ratio', and exports metrics hourly to Google Sheets.",
+    "stack": ["Python", "PRAW", "Pandas", "Google Sheets API", "AWS"],
+    "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Project%201%20-%20Automatic%20Reddit%20Analyzer%20and%20Visualizer%20(script).py",
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "azure-vm-mapping",
+    "title": "Azure VM Mapping Tool",
+    "summary": "Maps on-prem VM inventory to Azure SKUs using the Azure Resource API to estimate monthly cloud migration costs across pricing tiers.",
+    "stack": ["Python", "Azure API", "Pandas", "Excel"],
+    "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool",
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "recruiter-workflow",
+    "title": "Recruiter Log & Respond Workflow",
+    "summary": "n8n automation that classifies incoming emails with GPT-4, auto-labels Gmail, summarizes recruiter outreach, and logs everything to Google Sheets.",
+    "stack": ["n8n", "OpenAI API", "Gmail API", "Google Sheets"],
+    "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Recruiter%20Log%20and%20Respond%20Workflow.json",
+    "demo": null,
+    "image": null,
+    "featured": true
+  }
+]

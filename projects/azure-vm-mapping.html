@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure VM Mapping Tool — Mish Akopyan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+
+      <h1>Azure VM Mapping Tool</h1>
+
+      <div class="project-meta">
+        <span class="tag">Python</span>
+        <span class="tag">Azure API</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Excel</span>
+      </div>
+
+      <p class="summary">
+        Maps on-prem VM inventory to Azure SKUs using the Azure Resource API to estimate
+        monthly cloud migration costs across multiple pricing tiers.
+      </p>
+
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          Cloud migration planning requires mapping hundreds of on-premises VMs to the right Azure
+          SKUs and estimating costs across different pricing models (Pay-As-You-Go, 1-Year Reserved,
+          3-Year Reserved, with and without Azure Hybrid Benefit). Doing this manually per VM is
+          error-prone and slow.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <ul>
+          <li><strong>Inventory Input:</strong> Reads CSV/Excel files with on-prem VM specs — device name, core count, total RAM, disk size, OS</li>
+          <li><strong>Azure Pricing API:</strong> Fetches real-time VM pricing from the Azure Swagger pricing calculator API</li>
+          <li><strong>Mapping Logic:</strong> For each customer VM, finds Azure SKUs matching cores and RAM thresholds (85% cores, 65% RAM for dev; production uses tighter thresholds)</li>
+          <li><strong>SKU Selection:</strong> From matching VMs, selects the lowest disk size first, then lowest price</li>
+          <li><strong>Pricing Tiers:</strong> Outputs costs for PAYGO, 1-Year Reserved, 3-Year Reserved — each with AHUB (Azure Hybrid Use Benefit) variants</li>
+          <li><strong>Export:</strong> Generates Excel files per environment: <code>Dev_Pricing_Output_{customer}_{region}.xlsx</code> and <code>Prod_Pricing_Output_{customer}_{region}.xlsx</code></li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li>API client class (<code>GetData</code>) handles Azure pricing API calls and response parsing</li>
+          <li>VM name parser extracts size, OS, and tier from Azure naming conventions (handles 3–5 part names)</li>
+          <li>Separate mapping functions for dev vs. prod with different resource utilization targets</li>
+          <li>Validation ensures exactly one Azure VM match per input VM</li>
+          <li>Supports both CSV and Excel input formats</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Reduces migration cost estimation from days to minutes for large inventories</li>
+          <li>Consistent, repeatable pricing across environments and regions</li>
+          <li>Enables quick comparison across pricing tiers for budget planning</li>
+          <li>Excel output ready for stakeholder review without additional formatting</li>
+        </ul>
+      </div>
+
+      <div class="detail-links">
+        <a href="https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool" target="_blank" class="btn btn-primary">View Source Code</a>
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+
+</body>
+</html>
