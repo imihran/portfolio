@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mish Akopyan — Data Engineer Portfolio</title>
+  <meta name="description" content="Senior Data Engineer with 12+ years at Amazon, Microsoft, and Redfin. Real-time data platforms, streaming pipelines, and cloud infrastructure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand">Mish Akopyan</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="navbar-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <img
+        src="https://avatars.githubusercontent.com/u/5179732?s=200&v=4"
+        alt="Mish Akopyan"
+        class="hero-avatar"
+      >
+      <h1>Mihran "Mish" Akopyan</h1>
+      <p class="subtitle">Senior Data Engineer</p>
+      <p class="tagline">
+        12+ years at Amazon, Microsoft, and Redfin. I design and scale real-time data platforms
+        and streaming pipelines that process billions of events daily — while cutting infrastructure
+        costs by 40%+.
+      </p>
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank" class="btn btn-primary">LinkedIn</a>
+        <a href="https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/edit?usp=sharing" target="_blank" class="btn">Resume</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank" class="btn">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">A selection of projects that demonstrate practical data work and automation.</p>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered by JS from projects.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Tech &amp; Tools</h2>
+      <p class="section-subtitle">What I work with day to day.</p>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages &amp; Data</h3>
+          <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>PySpark</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>SciPy</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; Infrastructure</h3>
+          <ul>
+            <li>AWS</li>
+            <li>Azure</li>
+            <li>S3</li>
+            <li>Redshift</li>
+            <li>Glue</li>
+            <li>Lambda</li>
+            <li>Terraform</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Visualization &amp; BI</h3>
+          <ul>
+            <li>Power BI</li>
+            <li>Seaborn</li>
+            <li>Matplotlib</li>
+            <li>Tableau</li>
+            <li>Google Sheets</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Automation &amp; Tools</h3>
+          <ul>
+            <li>Selenium</li>
+            <li>n8n</li>
+            <li>Jupyter</li>
+            <li>BeautifulSoup</li>
+            <li>OpenAI API</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+        <a href="https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/edit?usp=sharing" target="_blank">Resume</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.querySelector('.navbar-links').classList.toggle('open');
+    });
+
+    // Load projects from JSON
+    fetch('data/projects.json')
+      .then(function (res) { return res.json(); })
+      .then(function (projects) {
+        var grid = document.getElementById('projects-grid');
+        projects.filter(function (p) { return p.featured; }).forEach(function (p) {
+          var card = document.createElement('div');
+          card.className = 'project-card';
+          card.innerHTML =
+            '<h3><a href="projects/' + p.id + '.html">' + p.title + '</a></h3>' +
+            '<p>' + p.summary + '</p>' +
+            '<div class="project-tags">' +
+              p.stack.map(function (s) { return '<span class="tag">' + s + '</span>'; }).join('') +
+            '</div>' +
+            '<div class="project-links">' +
+              '<a href="projects/' + p.id + '.html">View Details &rarr;</a>' +
+              (p.github ? '<a href="' + p.github + '" target="_blank">Source</a>' : '') +
+            '</div>';
+          grid.appendChild(card);
+        });
+      });
+  </script>
+
+</body>
+</html>

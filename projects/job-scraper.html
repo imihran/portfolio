@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Job Scraper — Mish Akopyan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+
+      <h1>LinkedIn Job Scraper</h1>
+
+      <div class="project-meta">
+        <span class="tag">Python</span>
+        <span class="tag">Selenium</span>
+        <span class="tag">BeautifulSoup</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Tkinter</span>
+      </div>
+
+      <p class="summary">
+        Automated job postings collection from LinkedIn using Selenium, with salary extraction,
+        pagination handling, and CSV export for trend analysis.
+      </p>
+
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          Manually browsing LinkedIn job listings is time-consuming and makes it hard to compare
+          compensation across roles. There's no built-in way to export and analyze job data at scale
+          for market research or personal job search optimization.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <ul>
+          <li><strong>GUI Input:</strong> Tkinter dialog prompts for the job title to search</li>
+          <li><strong>Browser Automation:</strong> Selenium with Firefox WebDriver handles LinkedIn login, search, and filtering (past week)</li>
+          <li><strong>Pagination:</strong> Automatically navigates through multiple pages of results</li>
+          <li><strong>Data Extraction:</strong> BeautifulSoup parses job title, company, location, and salary from listing HTML</li>
+          <li><strong>Salary Normalization:</strong> Custom regex logic converts hourly, monthly, and annual salary ranges into standardized annual figures</li>
+          <li><strong>Export:</strong> Results saved to CSV as <code>{job_title}_{date}_export.csv</code></li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li>Salary parser handles multiple formats: <code>$10/hr</code>, <code>$5000/month</code>, <code>$80K/yr</code> — all normalized to annual ranges</li>
+          <li>Returns <code>[lower_bound, upper_bound, average]</code> for each posting</li>
+          <li>Helper functions validate DOM elements with null-safe checks before extraction</li>
+          <li>webdriver-manager auto-manages browser driver versions</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Collects hundreds of job postings in minutes vs. hours of manual browsing</li>
+          <li>Structured CSV output enables pivot tables and trend analysis in Excel or Pandas</li>
+          <li>Salary normalization makes compensation comparison consistent across posting formats</li>
+        </ul>
+      </div>
+
+      <div class="detail-links">
+        <a href="https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App" target="_blank" class="btn btn-primary">View Source Code</a>
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+
+</body>
+</html>
