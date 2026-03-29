@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok EDA &amp; Hypothesis Testing — Mish Akopyan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+
+      <h1>TikTok EDA &amp; Hypothesis Testing</h1>
+
+      <div class="project-meta">
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Seaborn</span>
+        <span class="tag">SciPy</span>
+        <span class="tag">Matplotlib</span>
+      </div>
+
+      <p class="summary">
+        Exploratory data analysis and statistical hypothesis testing on TikTok claim verification
+        data, investigating relationships between video metrics, claim status, author verification,
+        and ban status.
+      </p>
+
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          TikTok needs to understand patterns in user-submitted claims to improve content moderation.
+          The key question: do videos flagged as "claims" vs. "opinions" show statistically significant
+          differences in engagement metrics like views, likes, shares, and comments?
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <ul>
+          <li><strong>Data Exploration:</strong> Analyzed a dataset of TikTok videos with claim status, verification status, ban status, and engagement metrics (views, likes, shares, downloads, comments)</li>
+          <li><strong>Visualization:</strong> Distribution plots, box plots, and correlation heatmaps using Seaborn and Matplotlib to identify patterns</li>
+          <li><strong>Statistical Testing:</strong> Hypothesis tests using SciPy to determine if engagement differences between claim types are statistically significant</li>
+          <li><strong>Segmentation:</strong> Analyzed metrics across verified vs. unverified authors and active vs. banned accounts</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Dataset</h2>
+        <ul>
+          <li>Video metadata: duration, transcription text</li>
+          <li>Claim status: claim vs. opinion</li>
+          <li>Author status: verified/not verified, active/under review/banned</li>
+          <li>Engagement: view count, like count, share count, download count, comment count</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Identified statistically significant engagement patterns between claim types</li>
+          <li>Provided actionable insights for content moderation prioritization</li>
+          <li>Executive summary delivered for non-technical stakeholders</li>
+        </ul>
+      </div>
+
+      <div class="detail-links">
+        <a href="https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok" target="_blank" class="btn btn-primary">View Notebooks &amp; Summary</a>
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+
+</body>
+</html>
