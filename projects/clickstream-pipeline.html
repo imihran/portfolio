@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clickstream Analytics Data Pipeline — Mish Akopyan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+
+      <h1>Clickstream Analytics Data Pipeline</h1>
+
+      <div class="project-meta">
+        <span class="tag">AWS</span>
+        <span class="tag">S3</span>
+        <span class="tag">Glue</span>
+        <span class="tag">Athena</span>
+        <span class="tag">Redshift</span>
+        <span class="tag">Lambda</span>
+        <span class="tag">PySpark</span>
+        <span class="tag">Terraform</span>
+      </div>
+
+      <p class="summary">
+        End-to-end design of a serverless, cloud-native data pipeline for processing large-scale
+        e-commerce clickstream data. This case study covers ingestion, transformation, warehousing,
+        event-driven processing, and non-functional considerations.
+      </p>
+
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          An e-commerce platform generates massive volumes of clickstream data (JSON files landing in S3)
+          that need to be ingested, transformed, and made available for analytics — all without managing
+          infrastructure or sacrificing query performance at scale.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <p>A 5-part serverless architecture on AWS:</p>
+        <ul>
+          <li><strong>Part 1 — Data Ingestion &amp; Cataloging:</strong> S3 partitioning by year/month/day/hour, Glue Data Catalog for schema management, Athena DDL with partition pruning optimization.</li>
+          <li><strong>Part 2 — Data Transformation:</strong> Star schema design (fact_clicks + dim_users), PySpark jobs for normalization and enrichment, Parquet output with compression.</li>
+          <li><strong>Part 3 — Data Warehouse Integration:</strong> Redshift Spectrum external tables for federated queries, analytical joins and aggregations, COPY/CTAS patterns for hot data.</li>
+          <li><strong>Part 4 — Event-Driven Component:</strong> EventBridge rules for real-time purchase events, Lambda handlers, S3 event notifications, SNS alerting.</li>
+          <li><strong>Part 5 — Non-Functional Considerations:</strong> IAM &amp; encryption security, cost optimization, data quality checks, CloudWatch monitoring, Terraform IaC.</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Architecture Highlights</h2>
+        <ul>
+          <li>Star schema with <code>fact_clicks</code> and <code>dim_users</code> tables for efficient analytical queries</li>
+          <li>Partition pruning reduces Athena scan costs by limiting data read to relevant time ranges</li>
+          <li>Redshift Spectrum enables querying S3 data directly without loading into Redshift clusters</li>
+          <li>Event-driven Lambda functions handle real-time purchase event processing</li>
+          <li>Full Terraform IaC for reproducible infrastructure deployment</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li><strong>80% reduction</strong> in time-to-insight for business analysts</li>
+          <li>Fully serverless — zero infrastructure management overhead</li>
+          <li>Cost-optimized with Parquet compression, partition pruning, and Spectrum offloading</li>
+          <li>Production-ready security with IAM policies, encryption at rest/in-transit, and VPC isolation</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Future Enhancements</h2>
+        <p>Kinesis/Kafka for real-time streaming, dbt for transformation layer, QuickSight dashboards, and SageMaker ML integration for predictive clickstream analytics.</p>
+      </div>
+
+      <div class="detail-links">
+        <a href="https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Clickstream%20Analytics%20Data%20Pipeline%20%E2%80%93%20Case%20Study.md" target="_blank" class="btn btn-primary">Read Full Case Study</a>
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+
+</body>
+</html>

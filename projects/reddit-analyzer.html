@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Reddit Analyzer — Mish Akopyan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+
+      <h1>Automatic Reddit Analyzer</h1>
+
+      <div class="project-meta">
+        <span class="tag">Python</span>
+        <span class="tag">PRAW</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Google Sheets API</span>
+        <span class="tag">AWS</span>
+      </div>
+
+      <p class="summary">
+        Script that pulls top posts from r/AmItheAsshole, analyzes comment sentiment votes,
+        calculates an "Asshole Ratio", and exports metrics hourly to Google Sheets from an AWS VM.
+      </p>
+
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          Reddit's r/AmItheAsshole is one of the most active judgment-based communities, but there's no
+          easy way to track voting patterns, sentiment trends, or aggregate judgment data over time.
+          Manual tracking is impractical given the volume and velocity of posts.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <ul>
+          <li><strong>Data Collection:</strong> PRAW (Python Reddit API Wrapper) pulls the top 20 hot posts, filtering out Meta and Update threads</li>
+          <li><strong>Comment Analysis:</strong> Scans comments and counts judgment votes — NTA (Not The Asshole), YTA (You're The Asshole), ESH (Everyone Sucks Here), INFO, NAH (No Assholes Here)</li>
+          <li><strong>Metric Calculation:</strong> Computes total votes per post and an "Asshole Ratio %" = (YTA + ESH) / Total Votes &times; 100</li>
+          <li><strong>Export:</strong> Pandas DataFrame pushed to Google Sheets via pygsheets for live dashboard access</li>
+          <li><strong>Scheduling:</strong> Runs hourly on an AWS VM for continuous data collection</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li>Reddit API authentication via PRAW with client credentials</li>
+          <li>Google Sheets integration via pygsheets with service account auth</li>
+          <li>Filters out non-judgment posts (Meta, Update) to keep data clean</li>
+          <li>Handles edge cases: posts with zero votes, deleted comments</li>
+          <li>Output spreadsheet: "aitareddit1" with live-updating metrics</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Automated what would take hours of manual browsing into a hands-off hourly pipeline</li>
+          <li>Google Sheets output enables easy sharing and chart creation without code</li>
+          <li>Demonstrates end-to-end: API ingestion, data processing, cloud scheduling, and live output</li>
+        </ul>
+      </div>
+
+      <div class="detail-links">
+        <a href="https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Project%201%20-%20Automatic%20Reddit%20Analyzer%20and%20Visualizer%20(script).py" target="_blank" class="btn btn-primary">View Source Code</a>
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+
+</body>
+</html>

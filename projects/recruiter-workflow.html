@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiter Log &amp; Respond Workflow — Mish Akopyan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+
+      <h1>Recruiter Log &amp; Respond Workflow</h1>
+
+      <div class="project-meta">
+        <span class="tag">n8n</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Gmail API</span>
+        <span class="tag">Google Sheets</span>
+      </div>
+
+      <p class="summary">
+        n8n automation workflow that classifies incoming emails with GPT-4, auto-labels Gmail,
+        summarizes recruiter outreach, and logs everything to Google Sheets.
+      </p>
+
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          A busy inbox with recruiter outreach, promotions, and personal emails requires constant
+          manual triage. Recruiter emails specifically need tracking — who reached out, when, and
+          about what — but manually logging each one breaks focus and leads to missed follow-ups.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <ul>
+          <li><strong>Gmail Trigger:</strong> n8n polls for new emails every 5 minutes</li>
+          <li><strong>AI Classification:</strong> OpenAI GPT-4 mini categorizes each email into one of 7 types — Promotions, Social Media, Personal, Sales, Recruitment, Receipts, or Misc</li>
+          <li><strong>Auto-Labeling:</strong> Gmail labels are automatically applied based on classification</li>
+          <li><strong>Summarization:</strong> GPT-4o-mini generates a concise summary of each email</li>
+          <li><strong>Logging:</strong> Classified and summarized emails are appended to a Google Sheets spreadsheet ("Email Summary n8n")</li>
+          <li><strong>Routing:</strong> Conditional routing sends different email types through different processing paths</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li>Built entirely in n8n (visual workflow automation platform) — no custom code needed</li>
+          <li>Text Classifier node uses GPT-4 mini with structured output for reliable categorization</li>
+          <li>Separate OpenAI node handles summarization with GPT-4o-mini for cost efficiency</li>
+          <li>Gmail OAuth2 integration for secure inbox access</li>
+          <li>Conditional branching handles each email category differently</li>
+          <li>Google Sheets acts as a lightweight CRM for recruiter tracking</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Zero manual triage — emails are classified, labeled, and logged automatically</li>
+          <li>Recruiter outreach is tracked in a searchable spreadsheet for easy follow-up</li>
+          <li>AI summaries save time reading lengthy recruiter emails</li>
+          <li>Demonstrates practical LLM integration beyond chat — using AI as a classification and extraction engine in a production workflow</li>
+        </ul>
+      </div>
+
+      <div class="detail-links">
+        <a href="https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Recruiter%20Log%20and%20Respond%20Workflow.json" target="_blank" class="btn btn-primary">View Workflow JSON</a>
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+
+</body>
+</html>
