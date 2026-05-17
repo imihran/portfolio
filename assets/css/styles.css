@@ -133,6 +133,8 @@ img {
 .hero {
   padding: 80px 0 60px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-avatar {
@@ -140,7 +142,9 @@ img {
   height: 100px;
   border-radius: 50%;
   margin: 0 auto 24px;
-  border: 3px solid var(--border);
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px rgba(96, 165, 250, 0.4);
+  animation: avatar-glow 3s ease-in-out infinite;
 }
 
 .hero h1 {
@@ -234,12 +238,15 @@ img {
   padding: 28px;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 
 .project-card:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(96, 165, 250, 0.12), 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
@@ -443,4 +450,127 @@ img {
   .project-detail h1 {
     font-size: 1.5rem;
   }
+}
+
+/* ===== Scroll Progress Bar ===== */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent) 0%, #818cf8 100%);
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* ===== Hero Canvas ===== */
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Avatar Glow Pulse ===== */
+@keyframes avatar-glow {
+  0%, 100% { box-shadow: 0 0 0 4px var(--bg), 0 0  0px 6px rgba(96, 165, 250, 0.35); }
+  50%       { box-shadow: 0 0 0 4px var(--bg), 0 0 14px 8px rgba(96, 165, 250, 0.55); }
+}
+
+/* ===== Typewriter Cursor ===== */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: tw-blink 1s step-end infinite;
+}
+
+@keyframes tw-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ===== Project Card Shine Sweep ===== */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(96, 165, 250, 0.06) 50%,
+    transparent 100%
+  );
+  transition: left 0.55s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-card:hover::before {
+  left: 160%;
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Active Nav Link Indicator ===== */
+.navbar-links a {
+  position: relative;
+}
+
+.navbar-links a.active {
+  color: var(--text) !important;
+}
+
+.navbar-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+/* ===== Skill Tag Hover ===== */
+.skill-group li {
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+  cursor: default;
+}
+
+.skill-group li:hover {
+  background: rgba(96, 165, 250, 0.14);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ===== Section Title Accent Line ===== */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 38px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin-top: 10px;
+  border-radius: 2px;
 }
