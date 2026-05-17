@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundational Data Layer Architecture (12 Metric Domains) — Mish Akopyan</title>
+  <meta name="description" content="Comprehensive primitive data layer spanning 12 metric domains serving as the single source of truth for executive reporting, eliminating 11-20 hours/week of manual preparation.">
+  <link rel="canonical" href="https://imihran.github.io/portfolio/projects/primitives-data-layer.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://imihran.github.io/portfolio/projects/primitives-data-layer.html">
+  <meta property="og:title" content="Foundational Data Layer Architecture (12 Metric Domains) — Mish Akopyan">
+  <meta property="og:description" content="Two-stage data architecture spanning 12 metric domains, eliminating 11-20 hours/week of manual data preparation.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+      <h1>Foundational Data Layer Architecture (12 Metric Domains)</h1>
+      <div class="project-meta">
+        <span class="tag">PySpark</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Data Modeling</span>
+        <span class="tag">Pipeline Orchestration</span>
+        <span class="tag">Cloud Data Warehouse</span>
+      </div>
+      <p class="summary">
+        Designed a comprehensive primitive data layer spanning 12 metric domains that serves as the
+        single source of truth for all executive reporting, eliminating 11-20 hours/week of manual
+        data preparation.
+      </p>
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          Executive reporting relied on manual data preparation across dozens of metrics with inconsistent
+          definitions. Each report required custom joins and transformations, creating a maintenance burden
+          and data quality risks. No centralized, governed data layer existed.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <p>
+          Designed a two-stage architecture: staging tables at item grain joined with a centralized
+          attribute foundation table, then rolled up to category-level aggregations with time-frame
+          comparisons. Led cross-functional design collaboration with 4 engineers to define pipeline
+          architecture and data flow patterns.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li><strong>12 metric domains</strong> covering financials, supply chain, inventory, and customer metrics</li>
+          <li><strong>Two-stage pattern:</strong> item-grain staging → category-level rollup with time-frame comparisons</li>
+          <li><strong>Centralized attribute foundation table</strong> as single source of truth</li>
+          <li><strong>Automated orchestration</strong> removing single-points-of-failure tied to individual contributors</li>
+          <li><strong>Natural language query interface</strong> for self-service metric querying (in progress)</li>
+          <li><strong>Migration from traditional data warehouse</strong> to modern lakehouse for scalability and governance</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li><strong>9 of 12 metric domains</strong> validated and operational (75%)</li>
+          <li>Eliminated <strong>11-20 hours/week</strong> of manual data preparation</li>
+          <li>Ensures data consistency across all vendor scorecards</li>
+          <li>Foundation table reused by multiple downstream projects</li>
+        </ul>
+      </div>
+      <div class="detail-links">
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Acquisition Analytics Platform — Mish Akopyan</title>
+  <meta name="description" content="Production analytics platform covering 11 customer acquisition dimensions across a major e-commerce marketplace, with deterministic classification methodology and natural language querying.">
+  <link rel="canonical" href="https://imihran.github.io/portfolio/projects/customer-acquisition-platform.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://imihran.github.io/portfolio/projects/customer-acquisition-platform.html">
+  <meta property="og:title" content="Customer Acquisition Analytics Platform — Mish Akopyan">
+  <meta property="og:description" content="Production analytics platform covering 11 customer acquisition dimensions with deterministic classification and NLP querying.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+      <h1>Customer Acquisition Analytics Platform</h1>
+      <div class="project-meta">
+        <span class="tag">PySpark</span>
+        <span class="tag">Spark</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Pipeline Orchestration</span>
+        <span class="tag">BI Dashboards</span>
+        <span class="tag">NLP/Chat Agent</span>
+      </div>
+      <p class="summary">
+        Built a production analytics platform covering 11 customer acquisition dimensions across a major
+        e-commerce marketplace, evolving from an ad-hoc promotion analysis into a VP-endorsed enterprise
+        solution with natural language querying.
+      </p>
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          No standardized way to measure customer acquisition across different dimensions (new-to-brand,
+          new-to-category, new-to-marketplace, etc.). Teams relied on ad-hoc analyses that couldn't be
+          replicated or scaled across promotion events like major sales events or seasonal campaigns.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <p>
+          Developed a deterministic customer classification methodology using set-difference logic, then
+          built a parameterized Spark pipeline that processes customer order data across 11 acquisition
+          dimensions. Designed the architecture to be event-driven — reusable for any promotion period
+          without code changes.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li><strong>EXCEPT-based set difference methodology</strong> for deterministic new-customer classification across 11 dimensions</li>
+          <li><strong>Parameterized Spark pipeline</strong> (iterated through 21 versions) with configurable lookback periods</li>
+          <li><strong>Unified lookback table optimization</strong> reducing redundant I/O across all dimension calculations</li>
+          <li><strong>Interactive dashboard</strong> with Summary and Dimension Deep Dive tabs</li>
+          <li><strong>Natural language query agent</strong> enabling self-service analytics without SQL expertise</li>
+          <li><strong>Dual-level reporting:</strong> dimension-level aggregates + item-level breakdowns</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Powers customer acquisition metrics for vendor negotiations and campaign planning across Retail, Marketing, and Partnership teams</li>
+          <li>Initial prototype directly convinced a top partner to invest in a second promotion iteration</li>
+          <li>VP of the division endorsed the platform and suggested sharing across the entire business unit</li>
+          <li>Customer methodology standardized across executive reporting</li>
+          <li>Supports a <strong>$485M+ strategic growth pillar</strong></li>
+        </ul>
+      </div>
+      <div class="detail-links">
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+</body>
+</html>

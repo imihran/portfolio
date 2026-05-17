@@ -1,5 +1,85 @@
 [
   {
+    "id": "customer-acquisition-platform",
+    "title": "Customer Acquisition Analytics Platform",
+    "summary": "Built a production analytics platform covering 11 customer acquisition dimensions across a major e-commerce marketplace, evolving from an ad-hoc promotion analysis into a VP-endorsed enterprise solution with natural language querying.",
+    "stack": ["PySpark", "Spark", "SQL", "Pipeline Orchestration", "BI Dashboards", "NLP/Chat Agent"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "ai-workflow-automation",
+    "title": "AI-Powered Data Engineering Workflow Suite",
+    "summary": "Built an AI-powered end-to-end workflow that transforms how data engineers deliver on requests — from intake through multi-agent analysis to stakeholder-ready responses with documented, version-controlled SQL.",
+    "stack": ["AI/LLM", "Python", "REST APIs", "SQL", "Automation", "Prompt Engineering"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "proactive-supply-chain-monitoring",
+    "title": "Proactive Supply Chain Monitoring System",
+    "summary": "Transformed vendor relationship management from reactive firefighting to proactive issue identification by building a multi-layered alarm system that saves ~3,640 hours annually across 70+ managers.",
+    "stack": ["SQL", "ETL", "Statistical Analysis", "Alerting Systems", "Data Pipeline"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "trade-up-analytics",
+    "title": "Customer Purchase Journey Analytics (Trade Up)",
+    "summary": "Designed a customer purchase journey analytics platform measuring base-to-premium product progression, with a novel customer classification methodology and an 8-stage data pipeline serving 7 product categories.",
+    "stack": ["PySpark", "Spark", "SQL", "Pipeline Orchestration", "BI Dashboards", "Data Modeling"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "primitives-data-layer",
+    "title": "Foundational Data Layer Architecture (12 Metric Domains)",
+    "summary": "Designed a comprehensive primitive data layer spanning 12 metric domains that serves as the single source of truth for all executive reporting, eliminating 11-20 hours/week of manual data preparation.",
+    "stack": ["PySpark", "SQL", "Data Modeling", "Pipeline Orchestration", "Cloud Data Warehouse"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "liquidation-analytics",
+    "title": "Liquidation Analytics Platform & Catalog Defect Viewer",
+    "summary": "Built the central hub for liquidation data reporting — a multi-tab dashboard tracking 7 liquidation types with volume-adjusted metrics, plus a proactive catalog defect viewer that identifies issues before they cause financial losses.",
+    "stack": ["SQL", "BI Dashboards", "Data Pipeline", "Monitoring", "ETL"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "executive-analytics-overhaul",
+    "title": "Executive Vendor Analytics Platform",
+    "summary": "Led the system redesign for executive-level vendor meetings with top 30 strategic partners, establishing formalized intake processes and standardized scorecards that reduced preparation time from 3-5 days to under 1 hour.",
+    "stack": ["SQL", "Data Modeling", "Process Design", "Documentation"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
+    "id": "cost-to-serve-analytics",
+    "title": "Cost to Serve Analytics Framework",
+    "summary": "Led BI development for an SVP-sponsored initiative delivering the first vendor Cost to Serve analysis, establishing a replicable framework for transparent cost-based vendor negotiations.",
+    "stack": ["SQL", "Data Analysis", "Cost Modeling", "Business Strategy"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": true
+  },
+  {
     "id": "clickstream-pipeline",
     "title": "Clickstream Analytics Data Pipeline",
     "summary": "End-to-end serverless AWS data pipeline for processing large-scale e-commerce clickstream data. Star schema design, PySpark transformations, Redshift Spectrum analytics, and event-driven alerting.",
@@ -10,6 +90,36 @@
     "featured": true
   },
   {
+    "id": "report-consolidation",
+    "title": "Enterprise Report Consolidation (31 → 1)",
+    "summary": "Diagnosed and fixed critical fiscal year-end failures caused by hardcoded date logic, then consolidated 31 separate reporting jobs into a single automated process — eliminating 40+ hours of monthly maintenance.",
+    "stack": ["SQL", "ETL", "Data Pipeline", "Automation"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "purchase-frequency-analysis",
+    "title": "Purchase Frequency & Cross-Sell Analysis",
+    "summary": "Deep analysis of customer purchase patterns and product relationships in a $2.3B category that revealed a $265M+ revenue opportunity and directly drove product feature development.",
+    "stack": ["SQL", "Data Analysis", "Business Strategy", "Revenue Modeling"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "global-metrics-platform",
+    "title": "Global Metrics Platform (21+ Marketplaces)",
+    "summary": "Extended a North America analytics framework to global scale, creating standardized input metrics views covering financials, operational metrics, and technology parity across 21+ worldwide marketplaces.",
+    "stack": ["SQL", "Data Modeling", "BI Dashboards", "Global Analytics"],
+    "github": null,
+    "demo": null,
+    "image": null,
+    "featured": false
+  },
+  {
     "id": "job-scraper",
     "title": "LinkedIn Job Scraper",
     "summary": "Automated job postings collection from LinkedIn using Selenium, with salary extraction, pagination handling, and CSV export for trend analysis.",
@@ -17,7 +127,7 @@
     "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App",
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": false
   },
   {
     "id": "tiktok-eda",
@@ -27,7 +137,7 @@
     "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok",
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": false
   },
   {
     "id": "reddit-analyzer",
@@ -37,7 +147,7 @@
     "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Project%201%20-%20Automatic%20Reddit%20Analyzer%20and%20Visualizer%20(script).py",
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": false
   },
   {
     "id": "azure-vm-mapping",
@@ -47,7 +157,7 @@
     "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool",
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": false
   },
   {
     "id": "recruiter-workflow",
@@ -57,6 +167,6 @@
     "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Recruiter%20Log%20and%20Respond%20Workflow.json",
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": false
   }
 ]

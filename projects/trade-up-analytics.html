@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Purchase Journey Analytics (Trade Up) — Mish Akopyan</title>
+  <meta name="description" content="Customer purchase journey analytics platform measuring base-to-premium product progression with novel classification methodology and 8-stage Spark pipeline.">
+  <link rel="canonical" href="https://imihran.github.io/portfolio/projects/trade-up-analytics.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://imihran.github.io/portfolio/projects/trade-up-analytics.html">
+  <meta property="og:title" content="Customer Purchase Journey Analytics (Trade Up) — Mish Akopyan">
+  <meta property="og:description" content="Novel customer classification methodology measuring base-to-premium progression with 8-stage Spark pipeline serving 7 product categories.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+      <h1>Customer Purchase Journey Analytics (Trade Up)</h1>
+      <div class="project-meta">
+        <span class="tag">PySpark</span>
+        <span class="tag">Spark</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Pipeline Orchestration</span>
+        <span class="tag">BI Dashboards</span>
+        <span class="tag">Data Modeling</span>
+      </div>
+      <p class="summary">
+        Designed a customer purchase journey analytics platform measuring base-to-premium product
+        progression, with a novel customer classification methodology and an 8-stage data pipeline
+        serving 7 product categories.
+      </p>
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          No way to quantify how customers progress from base-tier to premium products over time.
+          Category teams needed empirical evidence of "Trade Up" behavior to inform vendor collaboration
+          and customer engagement strategy, but the problem space was ambiguous with multiple valid approaches.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <p>
+          Developed a novel Trade Up customer classification methodology using T12M rolling windows with
+          temporal ordering constraints (premium purchase must occur AFTER base purchase). Built an 8-stage
+          pipeline with full dependency chain, Spark tuning, and a fallback mechanism for handling row
+          overflow at scale.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li><strong>Trade Up classification:</strong> T12M rolling window with temporal ordering constraint</li>
+          <li><strong>Trade Up Retain metric:</strong> identifies customers sustaining premium purchasing behavior</li>
+          <li><strong>8-stage pipeline</strong> with explicit dependency chain (sequential + parallel fan-in stages)</li>
+          <li><strong>Weighted SUMPRODUCT rollup</strong> to avoid double-counting overlapping customers at brand/vendor/category levels</li>
+          <li><strong>LISTAGG fallback mechanism</strong> for row overflow at scale (15K+ recommendation items per base)</li>
+          <li><strong>SQL dialect migration</strong> (warehouse-to-Spark) across all 8 stages with systematic function mapping</li>
+          <li><strong>Pipeline optimization:</strong> inlined 5 intermediate tables as temp views to reduce stage count</li>
+          <li><strong>Cross-project architecture leverage:</strong> reuses centralized attribute foundation table</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Director-sponsored initiative directly informing customer engagement strategy</li>
+          <li>Enables category teams to quantify Trade Up behavior with empirical evidence</li>
+          <li>Supports vendor collaboration to identify "new money" opportunities</li>
+          <li>Featured in monthly business review presentation</li>
+          <li>Architecture pattern adopted as reference for future analytics pipelines</li>
+        </ul>
+      </div>
+      <div class="detail-links">
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+</body>
+</html>

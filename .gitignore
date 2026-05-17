@@ -1,5 +1,6 @@
 # Claude Code local config
 .claude/
+.kiro/
 
 # Python
 __pycache__/
@@ -11,3 +12,5 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+amazon_projects

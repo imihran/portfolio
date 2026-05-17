@@ -2,3 +2,4 @@ exclude:
   - README.md
   - test.txt
   - Algo_Ninja
+  - amazon_projects
