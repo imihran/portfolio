@@ -37,7 +37,7 @@ document.querySelector('.nav-toggle').addEventListener('click', function () {
   var hero = document.querySelector('.hero');
   var W, H;
   var mouse = { x: null, y: null };
-  var N = 55, MAX = 125, CLR = '96,165,250';
+  var N = 48, MAX = 120, CLR = '245,158,11';
 
   function resize() {
     W = canvas.width  = hero.offsetWidth;
@@ -49,9 +49,9 @@ document.querySelector('.nav-toggle').addEventListener('click', function () {
     self.reset = function () {
       self.x  = Math.random() * W;
       self.y  = Math.random() * H;
-      self.vx = (Math.random() - 0.5) * 0.38;
-      self.vy = (Math.random() - 0.5) * 0.38;
-      self.r  = Math.random() * 1.4 + 0.7;
+      self.vx = (Math.random() - 0.5) * 0.32;
+      self.vy = (Math.random() - 0.5) * 0.32;
+      self.r  = Math.random() * 1.2 + 0.6;
     };
     self.update = function () {
       self.x += self.vx;
@@ -61,13 +61,13 @@ document.querySelector('.nav-toggle').addEventListener('click', function () {
       if (mouse.x !== null) {
         var dx = self.x - mouse.x, dy = self.y - mouse.y;
         var d  = Math.sqrt(dx * dx + dy * dy);
-        if (d < 85 && d > 0) { self.x += dx / d * 1.6; self.y += dy / d * 1.6; }
+        if (d < 85 && d > 0) { self.x += dx / d * 1.5; self.y += dy / d * 1.5; }
       }
     };
     self.draw = function () {
       ctx.beginPath();
       ctx.arc(self.x, self.y, self.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + CLR + ',0.68)';
+      ctx.fillStyle = 'rgba(' + CLR + ',0.55)';
       ctx.fill();
     };
     self.reset();
@@ -88,8 +88,8 @@ document.querySelector('.nav-toggle').addEventListener('click', function () {
           ctx.beginPath();
           ctx.moveTo(pts[i].x, pts[i].y);
           ctx.lineTo(pts[j].x, pts[j].y);
-          ctx.strokeStyle = 'rgba(' + CLR + ',' + ((1 - d / MAX) * 0.16) + ')';
-          ctx.lineWidth = 0.55;
+          ctx.strokeStyle = 'rgba(' + CLR + ',' + ((1 - d / MAX) * 0.13) + ')';
+          ctx.lineWidth = 0.5;
           ctx.stroke();
         }
       }
@@ -134,31 +134,38 @@ document.querySelector('.nav-toggle').addEventListener('click', function () {
 
 // ─── Hero Entrance Animation ──────────────────────────────────────────────────
 gsap.timeline({ delay: 0.1 })
-  .from('#hero-canvas',      { opacity: 0,                duration: 1.1                            })
-  .from('.hero-avatar',      { opacity: 0, scale: 0.78,   duration: 0.7, ease: 'back.out(1.7)'     }, '-=0.8')
-  .from('.hero h1',          { opacity: 0, y: 22,         duration: 0.6, ease: 'power3.out'         }, '-=0.4')
-  .from('.hero .subtitle',   { opacity: 0, y: 16,         duration: 0.5, ease: 'power2.out'         }, '-=0.3')
-  .from('.hero .tagline',    { opacity: 0, y: 14,         duration: 0.5, ease: 'power2.out'         }, '-=0.2')
-  .from('.hero-links .btn',  { opacity: 0, y: 10, stagger: 0.1, duration: 0.45, ease: 'power2.out' }, '-=0.2');
+  .from('#hero-canvas',          { opacity: 0,                duration: 1.2                             })
+  .from('.hero-avatar-wrap',     { opacity: 0, scale: 0.82,   duration: 0.7, ease: 'back.out(1.5)'      }, '-=0.9')
+  .from('.hero-overline',        { opacity: 0, y: 10,         duration: 0.45, ease: 'power2.out'         }, '-=0.5')
+  .from('.hero h1',              { opacity: 0, y: 22,         duration: 0.65, ease: 'power3.out'         }, '-=0.3')
+  .from('.hero .subtitle',       { opacity: 0, y: 14,         duration: 0.5,  ease: 'power2.out'         }, '-=0.3')
+  .from('.hero .tagline',        { opacity: 0, y: 12,         duration: 0.5,  ease: 'power2.out'         }, '-=0.2')
+  .from('.hero-links .btn',      { opacity: 0, y: 8, stagger: 0.1, duration: 0.42, ease: 'power2.out'   }, '-=0.2');
 
-// ─── Section Title & Subtitle Scroll Reveals ──────────────────────────────────
+// ─── Section Overline + Title + Subtitle Scroll Reveals ───────────────────────
+gsap.utils.toArray('.section-overline').forEach(function (el) {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 90%' },
+    opacity: 0, y: 8, duration: 0.4, ease: 'power2.out'
+  });
+});
 gsap.utils.toArray('.section-title').forEach(function (el) {
   gsap.from(el, {
     scrollTrigger: { trigger: el, start: 'top 88%' },
-    opacity: 0, x: -18, duration: 0.55, ease: 'power2.out'
+    opacity: 0, x: -16, duration: 0.55, ease: 'power2.out', delay: 0.05
   });
 });
 gsap.utils.toArray('.section-subtitle').forEach(function (el) {
   gsap.from(el, {
     scrollTrigger: { trigger: el, start: 'top 88%' },
-    opacity: 0, y: 10, duration: 0.45, ease: 'power2.out', delay: 0.08
+    opacity: 0, y: 8, duration: 0.45, ease: 'power2.out', delay: 0.1
   });
 });
 
 // ─── Skills Grid Reveal ───────────────────────────────────────────────────────
 gsap.from('.skill-group', {
   scrollTrigger: { trigger: '#skills', start: 'top 82%' },
-  opacity: 0, y: 24, stagger: 0.09, duration: 0.5, ease: 'power2.out'
+  opacity: 0, y: 20, stagger: 0.08, duration: 0.5, ease: 'power2.out'
 });
 
 // ─── Projects: Fetch → Render → Animate ──────────────────────────────────────
@@ -166,25 +173,28 @@ fetch('data/projects.json')
   .then(function (res) { return res.json(); })
   .then(function (projects) {
     var grid = document.getElementById('projects-grid');
-    projects.filter(function (p) { return p.featured; }).forEach(function (p) {
+    var featured = projects.filter(function (p) { return p.featured; });
+    featured.forEach(function (p, idx) {
       var card = document.createElement('div');
       card.className = 'project-card';
+      var num = String(idx + 1).padStart(2, '0');
       card.innerHTML =
+        '<p class="project-number">' + num + '</p>' +
         '<h3><a href="projects/' + p.id + '.html">' + p.title + '</a></h3>' +
         '<p>' + p.summary + '</p>' +
         '<div class="project-tags">' +
           p.stack.map(function (s) { return '<span class="tag">' + s + '</span>'; }).join('') +
         '</div>' +
         '<div class="project-links">' +
-          '<a href="projects/' + p.id + '.html">View Details &rarr;</a>' +
-          (p.github ? '<a href="' + p.github + '" target="_blank">Source</a>' : '') +
+          '<a href="projects/' + p.id + '.html">View details &rarr;</a>' +
+          (p.github ? '<a href="' + p.github + '" target="_blank">Source &rarr;</a>' : '') +
         '</div>';
       grid.appendChild(card);
     });
 
     gsap.from('.project-card', {
       scrollTrigger: { trigger: '#projects', start: 'top 82%' },
-      opacity: 0, y: 32, stagger: 0.1, duration: 0.6, ease: 'power2.out'
+      opacity: 0, y: 28, stagger: 0.09, duration: 0.6, ease: 'power2.out'
     });
     ScrollTrigger.refresh();
   });

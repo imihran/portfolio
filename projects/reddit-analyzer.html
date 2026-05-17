@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automatic Reddit Analyzer — Mish Akopyan</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-
   <nav class="navbar">
     <div class="container">
       <a href="../" class="navbar-brand">Mish Akopyan</a>
@@ -20,13 +21,10 @@
       </ul>
     </div>
   </nav>
-
   <div class="container">
     <article class="project-detail">
       <a href="../#projects" class="back-link">&larr; All Projects</a>
-
       <h1>Automatic Reddit Analyzer</h1>
-
       <div class="project-meta">
         <span class="tag">Python</span>
         <span class="tag">PRAW</span>
@@ -34,12 +32,10 @@
         <span class="tag">Google Sheets API</span>
         <span class="tag">AWS</span>
       </div>
-
       <p class="summary">
         Script that pulls top posts from r/AmItheAsshole, analyzes comment sentiment votes,
         calculates an "Asshole Ratio", and exports metrics hourly to Google Sheets from an AWS VM.
       </p>
-
       <div class="detail-section">
         <h2>Problem</h2>
         <p>
@@ -48,7 +44,6 @@
           Manual tracking is impractical given the volume and velocity of posts.
         </p>
       </div>
-
       <div class="detail-section">
         <h2>Approach</h2>
         <ul>
@@ -59,7 +54,6 @@
           <li><strong>Scheduling:</strong> Runs hourly on an AWS VM for continuous data collection</li>
         </ul>
       </div>
-
       <div class="detail-section">
         <h2>Technical Details</h2>
         <ul>
@@ -70,7 +64,6 @@
           <li>Output spreadsheet: "aitareddit1" with live-updating metrics</li>
         </ul>
       </div>
-
       <div class="detail-section">
         <h2>Impact</h2>
         <ul>
@@ -79,14 +72,12 @@
           <li>Demonstrates end-to-end: API ingestion, data processing, cloud scheduling, and live output</li>
         </ul>
       </div>
-
       <div class="detail-links">
         <a href="https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Project%201%20-%20Automatic%20Reddit%20Analyzer%20and%20Visualizer%20(script).py" target="_blank" class="btn btn-primary">View Source Code</a>
         <a href="../#projects" class="btn">Back to Projects</a>
       </div>
     </article>
   </div>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
@@ -96,6 +87,5 @@
       <p>&copy; 2026 Mish Akopyan</p>
     </div>
   </footer>
-
 </body>
 </html>
