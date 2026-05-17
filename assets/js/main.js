@@ -196,5 +196,30 @@ fetch('data/projects.json')
       scrollTrigger: { trigger: '#projects', start: 'top 82%' },
       opacity: 0, y: 28, stagger: 0.09, duration: 0.6, ease: 'power2.out'
     });
+
+    // ─── Other Projects (non-featured) ─────────────────────────────────────────
+    var otherGrid = document.getElementById('other-projects-grid');
+    var other = projects.filter(function (p) { return !p.featured; });
+    other.forEach(function (p) {
+      var card = document.createElement('div');
+      card.className = 'project-card project-card--compact';
+      card.innerHTML =
+        '<h3><a href="projects/' + p.id + '.html">' + p.title + '</a></h3>' +
+        '<p>' + p.summary + '</p>' +
+        '<div class="project-tags">' +
+          p.stack.map(function (s) { return '<span class="tag">' + s + '</span>'; }).join('') +
+        '</div>' +
+        '<div class="project-links">' +
+          '<a href="projects/' + p.id + '.html">View details &rarr;</a>' +
+          (p.github ? '<a href="' + p.github + '" target="_blank">Source &rarr;</a>' : '') +
+        '</div>';
+      otherGrid.appendChild(card);
+    });
+
+    gsap.from('.project-card--compact', {
+      scrollTrigger: { trigger: '#other-projects', start: 'top 82%' },
+      opacity: 0, y: 20, stagger: 0.06, duration: 0.45, ease: 'power2.out'
+    });
+
     ScrollTrigger.refresh();
   });

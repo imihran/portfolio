@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proactive Supply Chain Monitoring System — Mish Akopyan</title>
+  <meta name="description" content="Multi-layered alarm system transforming vendor management from reactive firefighting to proactive issue identification, saving ~3,640 hours annually across 70+ managers.">
+  <link rel="canonical" href="https://imihran.github.io/portfolio/projects/proactive-supply-chain-monitoring.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://imihran.github.io/portfolio/projects/proactive-supply-chain-monitoring.html">
+  <meta property="og:title" content="Proactive Supply Chain Monitoring System — Mish Akopyan">
+  <meta property="og:description" content="4-alarm escalation system saving ~3,640 hours annually with statistical anomaly detection across 70+ vendor managers.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+      <h1>Proactive Supply Chain Monitoring System</h1>
+      <div class="project-meta">
+        <span class="tag">SQL</span>
+        <span class="tag">ETL</span>
+        <span class="tag">Statistical Analysis</span>
+        <span class="tag">Alerting Systems</span>
+        <span class="tag">Data Pipeline</span>
+      </div>
+      <p class="summary">
+        Transformed vendor relationship management from reactive firefighting to proactive issue
+        identification by building a multi-layered alarm system that saves ~3,640 hours annually
+        across 70+ managers.
+      </p>
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          Supply chain managers had no early warning system for vendor issues. Problems were discovered
+          2-3 days after they occurred, and each manager spent ~1 hour/week manually checking for
+          anomalies across their vendor portfolio. No prior solution existed in this space.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <p>
+          Designed a 4-alarm escalation workflow where each layer provides increasing specificity:
+          vendor-level flagging → historical trend diagnosis → item-level root cause → inventory health
+          monitoring. Built a 708-line SQL pipeline consolidating 9 data sources into a unified view.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li><strong>4-alarm escalation architecture:</strong> vendor-level triage → trend diagnosis → item root cause → inventory health</li>
+          <li><strong>Statistical threshold logic</strong> using trailing 12-week/15-week min-max bands with fallback rules</li>
+          <li><strong>Item-level anomaly detection</strong> using 60%/140% of trailing average thresholds</li>
+          <li><strong>Weeks-of-Cover calculation</strong> consolidating 9 data sources (inventory, demand forecasts, buyability, procurability, attribution)</li>
+          <li><strong>Color-coded alerting</strong> (RED/YELLOW) with automated daily scheduling (Mon-Fri)</li>
+          <li><strong>Dual report variants:</strong> internal and external (vendor-facing)</li>
+          <li><strong>Self-service query interface</strong> for next-week order plan visibility</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li><strong>~3,640 hours saved annually</strong> (1 hr/week × 70 managers × 52 weeks)</li>
+          <li>Alerts delivered within <strong>2-3 hours</strong> vs 2-3 days previously</li>
+          <li>Directly addresses vendor feedback about lack of early warning systems</li>
+          <li>Established new operational paradigm adopted across the supply chain organization</li>
+        </ul>
+      </div>
+      <div class="detail-links">
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+</body>
+</html>
