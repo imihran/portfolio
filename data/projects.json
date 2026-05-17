@@ -7,7 +7,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "ai-workflow-automation",
@@ -17,7 +18,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "proactive-supply-chain-monitoring",
@@ -27,7 +29,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "trade-up-analytics",
@@ -37,7 +40,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "primitives-data-layer",
@@ -47,7 +51,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "liquidation-analytics",
@@ -57,7 +62,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "executive-analytics-overhaul",
@@ -67,7 +73,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "cost-to-serve-analytics",
@@ -77,7 +84,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": true,
+    "type": "enterprise"
   },
   {
     "id": "clickstream-pipeline",
@@ -87,7 +95,7 @@
     "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Clickstream%20Analytics%20Data%20Pipeline%20%E2%80%93%20Case%20Study.md",
     "demo": null,
     "image": null,
-    "featured": true
+    "featured": false
   },
   {
     "id": "report-consolidation",
@@ -97,7 +105,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "type": "enterprise"
   },
   {
     "id": "purchase-frequency-analysis",
@@ -107,7 +116,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "type": "enterprise"
   },
   {
     "id": "global-metrics-platform",
@@ -117,7 +127,8 @@
     "github": null,
     "demo": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "type": "enterprise"
   },
   {
     "id": "job-scraper",
