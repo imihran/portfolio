@@ -179,7 +179,10 @@ fetch('data/projects.json')
       card.className = 'project-card';
       var num = String(idx + 1).padStart(2, '0');
       card.innerHTML =
-        '<p class="project-number">' + num + '</p>' +
+        '<div class="project-card-top">' +
+          '<p class="project-number">' + num + '</p>' +
+          (p.type === 'enterprise' ? '<span class="badge-enterprise">industry</span>' : '') +
+        '</div>' +
         '<h3><a href="projects/' + p.id + '.html">' + p.title + '</a></h3>' +
         '<p>' + p.summary + '</p>' +
         '<div class="project-tags">' +
@@ -187,7 +190,9 @@ fetch('data/projects.json')
         '</div>' +
         '<div class="project-links">' +
           '<a href="projects/' + p.id + '.html">View details &rarr;</a>' +
-          (p.github ? '<a href="' + p.github + '" target="_blank">Source &rarr;</a>' : '') +
+          (p.github
+            ? '<a href="' + p.github + '" target="_blank">Source &rarr;</a>'
+            : (p.type === 'enterprise' ? '<span class="code-proprietary">// code proprietary</span>' : '')) +
         '</div>';
       grid.appendChild(card);
     });

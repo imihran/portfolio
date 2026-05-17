@@ -653,6 +653,39 @@ img { max-width: 100%; display: block; }
   background: var(--accent);
 }
 
+/* ===== Enterprise Badge ===== */
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.project-card-top .project-number {
+  margin-bottom: 0;
+}
+
+.badge-enterprise {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.65;
+  border: 1px solid rgba(245,158,11,0.25);
+  padding: 2px 7px;
+  border-radius: 1px;
+}
+
+.code-proprietary {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.45;
+  font-style: italic;
+  cursor: default;
+}
+
 /* ===== Compact Project Grid (Other Projects) ===== */
 .projects-grid--compact {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

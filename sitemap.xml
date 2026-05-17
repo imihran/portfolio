@@ -5,6 +5,65 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Enterprise / Industry Projects -->
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/customer-acquisition-platform.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/proactive-supply-chain-monitoring.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/ai-workflow-automation.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/primitives-data-layer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/trade-up-analytics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/liquidation-analytics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/executive-analytics-overhaul.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/cost-to-serve-analytics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/report-consolidation.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/purchase-frequency-analysis.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://imihran.github.io/portfolio/projects/global-metrics-platform.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Personal / Open-Source Projects -->
   <url>
     <loc>https://imihran.github.io/portfolio/projects/clickstream-pipeline.html</loc>
     <changefreq>monthly</changefreq>
@@ -13,26 +72,26 @@
   <url>
     <loc>https://imihran.github.io/portfolio/projects/job-scraper.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://imihran.github.io/portfolio/projects/tiktok-eda.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://imihran.github.io/portfolio/projects/reddit-analyzer.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://imihran.github.io/portfolio/projects/azure-vm-mapping.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://imihran.github.io/portfolio/projects/recruiter-workflow.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>
