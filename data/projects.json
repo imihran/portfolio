@@ -179,5 +179,15 @@
     "demo": null,
     "image": null,
     "featured": false
+  },
+  {
+    "id": "ai-analytics-syllabus",
+    "title": "AI in Analytics — Course Syllabus",
+    "summary": "A 4-week, 8-session instructor-led course that makes skilled analysts faster by treating AI as a co-analyst across the data workflow — from prompting and AI pair-programming to conversational/predictive analytics, governance, and a capstone. Authored as a draft syllabus and pedagogical vision for an Armenian Code Academy instructor role.",
+    "stack": ["Curriculum Design", "AI/LLM", "Prompt Engineering", "Analytics", "RAG", "Teaching"],
+    "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/AI%20in%20Analytics%20%E2%80%93%20Course%20Syllabus.md",
+    "demo": null,
+    "image": null,
+    "featured": false
   }
 ]
