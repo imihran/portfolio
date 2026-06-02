@@ -22,6 +22,17 @@
     "type": "enterprise"
   },
   {
+    "id": "repopulse",
+    "title": "RepoPulse",
+    "summary": "Built an autonomous repo-health investigation system that monitors GH Archive activity, detects anomalies in open-source projects, and writes cited root-cause reports using LangGraph, Postgres, pgvector, and OpenAI.",
+    "stack": ["Python", "LangGraph", "Postgres", "pgvector", "OpenAI API", "Cloudflare Pages"],
+    "github": "https://github.com/imihran/repo-pulse",
+    "demo": "https://repopulse.pages.dev",
+    "image": null,
+    "featured": true,
+    "type": "open-source"
+  },
+  {
     "id": "proactive-supply-chain-monitoring",
     "title": "Proactive Supply Chain Monitoring System",
     "summary": "Transformed vendor relationship management from reactive firefighting to proactive issue identification by building a multi-layered alarm system that saves ~3,640 hours annually across 70+ managers.",
@@ -176,6 +187,16 @@
     "summary": "n8n automation that classifies incoming emails with GPT-4, auto-labels Gmail, summarizes recruiter outreach, and logs everything to Google Sheets.",
     "stack": ["n8n", "OpenAI API", "Gmail API", "Google Sheets"],
     "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Recruiter%20Log%20and%20Respond%20Workflow.json",
+    "demo": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "job-hunt-template",
+    "title": "Job Hunt Template",
+    "summary": "Local-first toolkit for tracking recruiter outreach, role pitches, compensation ranges, and follow-ups in SQLite, with idempotent JSON upserts and privacy-safe templates.",
+    "stack": ["Python", "SQLite", "CLI Automation", "Shell", "Data Modeling"],
+    "github": "https://github.com/imihran/job-hunt-template",
     "demo": null,
     "image": null,
     "featured": false
