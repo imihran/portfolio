@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RepoPulse — Mish Akopyan</title>
+  <meta name="description" content="RepoPulse is an autonomous repo-health investigation system that detects open-source GitHub activity anomalies and produces cited root-cause reports using LangGraph, Postgres, pgvector, and OpenAI.">
+  <link rel="canonical" href="https://imihran.github.io/portfolio/projects/repopulse.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://imihran.github.io/portfolio/projects/repopulse.html">
+  <meta property="og:title" content="RepoPulse — Mish Akopyan">
+  <meta property="og:description" content="Autonomous GitHub repo-health monitoring and cited incident investigation for open-source projects.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="navbar-brand">Mish Akopyan</a>
+      <ul class="navbar-links">
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#skills">Skills</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <article class="project-detail">
+      <a href="../#projects" class="back-link">&larr; All Projects</a>
+      <h1>RepoPulse</h1>
+      <div class="project-meta">
+        <span class="tag">Python</span>
+        <span class="tag">LangGraph</span>
+        <span class="tag">Postgres</span>
+        <span class="tag">pgvector</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Cloudflare Pages</span>
+      </div>
+      <p class="summary">
+        Autonomous repo-health monitoring system that watches GitHub activity, detects unusual
+        changes, and writes cited root-cause reports for open-source maintainers.
+      </p>
+      <div class="detail-section">
+        <h2>Problem</h2>
+        <p>
+          Most GitHub analytics tools report metrics, but they do not explain why activity changed.
+          Maintainers still have to inspect PRs, releases, issues, comments, and timing patterns by
+          hand when merge times slow down or issue volume spikes.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2>Approach</h2>
+        <ul>
+          <li><strong>Event ingestion:</strong> Downloads GH Archive data and filters it into Postgres for watched repositories</li>
+          <li><strong>Metric detection:</strong> Computes daily repo-health metrics and flags anomalies with a MAD z-score baseline</li>
+          <li><strong>Evidence enrichment:</strong> Pulls PR, issue, comment, and release context from the GitHub API</li>
+          <li><strong>Semantic search:</strong> Chunks enriched artifacts, embeds them, and indexes them in pgvector for cited retrieval</li>
+          <li><strong>Agent investigation:</strong> Uses a LangGraph loop to choose SQL, semantic search, or release-note tools based on the question</li>
+          <li><strong>Static publishing:</strong> Exports reports to a Cloudflare Pages frontend with report details and citations</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li>Postgres 16 with pgvector stores raw events, metrics, anomalies, artifacts, embeddings, reports, and citations</li>
+          <li>HNSW vector index supports fast approximate nearest-neighbor retrieval over PR and issue text</li>
+          <li>Pydantic validates the agent output contract so reports cannot include uncited claims</li>
+          <li>Guardrail test suite covers SQL safety, prompt injection resistance, and report grounding behavior</li>
+          <li>Makefile-driven local workflow runs Docker, ingestion, detection, enrichment, embedding, evaluation, and export commands</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Turns repo-health monitoring from dashboards into incident-style explanations with evidence</li>
+          <li>Keeps investigation cost low with GPT-4o-mini and a bounded 6-tool-call agent budget</li>
+          <li>Demonstrates production-oriented AI engineering: retrieval, structured outputs, guardrails, observability, and evals</li>
+        </ul>
+      </div>
+      <div class="detail-links">
+        <a href="https://repopulse.pages.dev" target="_blank" class="btn btn-primary">View Live Demo</a>
+        <a href="https://github.com/imihran/repo-pulse" target="_blank" class="btn">View Source Code</a>
+        <a href="../#projects" class="btn">Back to Projects</a>
+      </div>
+    </article>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/imihran" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 Mish Akopyan</p>
+    </div>
+  </footer>
+</body>
+</html>
