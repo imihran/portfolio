@@ -8,7 +8,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "$485M+", "label": "strategic growth pillar powered by the platform" }
   },
   {
     "id": "ai-workflow-automation",
@@ -19,7 +20,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "<5 min", "label": "per data request, down from ~30 minutes" }
   },
   {
     "id": "repopulse",
@@ -30,7 +32,8 @@
     "demo": "https://repopulse.pages.dev",
     "image": null,
     "featured": true,
-    "type": "open-source"
+    "type": "open-source",
+    "kpi": { "value": "0", "label": "uncited claims — every report is evidence-grounded" }
   },
   {
     "id": "proactive-supply-chain-monitoring",
@@ -41,7 +44,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "3,640 hrs", "label": "saved annually across 70+ vendor managers" }
   },
   {
     "id": "trade-up-analytics",
@@ -52,7 +56,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "8-stage", "label": "pipeline serving 7 product categories" }
   },
   {
     "id": "primitives-data-layer",
@@ -63,7 +68,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "12", "label": "metric domains; 11–20 hrs/week of manual prep eliminated" }
   },
   {
     "id": "liquidation-analytics",
@@ -74,7 +80,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "7", "label": "liquidation types tracked in one volume-adjusted hub" }
   },
   {
     "id": "executive-analytics-overhaul",
@@ -85,7 +92,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "<1 hr", "label": "executive prep, down from 3–5 days; 15+ meetings delivered" }
   },
   {
     "id": "cost-to-serve-analytics",
@@ -96,7 +104,8 @@
     "demo": null,
     "image": null,
     "featured": true,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "30+", "label": "strategic vendors on a replicable cost-to-serve framework" }
   },
   {
     "id": "clickstream-pipeline",
@@ -117,7 +126,8 @@
     "demo": null,
     "image": null,
     "featured": false,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "31 → 1", "label": "jobs consolidated; 40+ hrs/month recovered" }
   },
   {
     "id": "purchase-frequency-analysis",
@@ -128,7 +138,8 @@
     "demo": null,
     "image": null,
     "featured": false,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "$265M+", "label": "opportunity surfaced in a $2.3B category" }
   },
   {
     "id": "global-metrics-platform",
@@ -139,7 +150,8 @@
     "demo": null,
     "image": null,
     "featured": false,
-    "type": "enterprise"
+    "type": "enterprise",
+    "kpi": { "value": "21+", "label": "marketplaces on standardized metrics" }
   },
   {
     "id": "job-scraper",
