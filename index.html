@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mish Akopyan — Senior Data Engineer Portfolio | AWS · PySpark · Redshift</title>
-  <meta name="description" content="Senior Data Engineer with 14+ years at Amazon, Microsoft, and Redfin. Expert in AWS, PySpark, Redshift, and Terraform — building streaming pipelines that process billions of events daily while cutting infra costs 40%+.">
+  <title>Mish Akopyan — Business Intelligence Engineer | Amazon · Analytics Platforms · Executive Reporting</title>
+  <meta name="description" content="Business Intelligence Engineer with 14+ years at Amazon, Microsoft, and Redfin. Analytics platforms, vendor scorecards, and executive reporting measured in outcomes: a $485M+ growth pillar, 3,640 hours saved annually, $265M+ in surfaced opportunity.">
   <link rel="canonical" href="https://imihran.github.io/portfolio/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://imihran.github.io/portfolio/">
-  <meta property="og:title" content="Mish Akopyan — Senior Data Engineer Portfolio">
-  <meta property="og:description" content="14+ years at Amazon, Microsoft, and Redfin. AWS · PySpark · Redshift · Terraform. Streaming pipelines processing billions of events daily.">
+  <meta property="og:title" content="Mish Akopyan — Business Intelligence Engineer · Data Intelligence">
+  <meta property="og:description" content="14+ years at Amazon, Microsoft, and Redfin. Analytics platforms and executive reporting measured in outcomes: $485M+ growth pillar, 3,640 hours saved annually, $265M+ opportunity surfaced.">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mish Akopyan — Senior Data Engineer Portfolio">
-  <meta name="twitter:description" content="14+ years at Amazon, Microsoft, and Redfin. AWS · PySpark · Redshift · Terraform. Streaming pipelines processing billions of events daily.">
+  <meta name="twitter:title" content="Mish Akopyan — Business Intelligence Engineer · Data Intelligence">
+  <meta name="twitter:description" content="14+ years at Amazon, Microsoft, and Redfin. Analytics platforms and executive reporting measured in outcomes: $485M+ growth pillar, 3,640 hours saved annually, $265M+ opportunity surfaced.">
   <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
 
   <!-- JSON-LD structured data -->
@@ -32,23 +32,25 @@
         "alternateName": "Mish Akopyan",
         "url": "https://imihran.github.io/portfolio/",
         "image": "https://avatars.githubusercontent.com/u/5179732?s=400&v=4",
-        "jobTitle": "Senior Data Engineer",
+        "jobTitle": "Senior Business Intelligence Engineer",
         "sameAs": [
           "https://www.linkedin.com/in/mish-akopyan/",
           "https://github.com/imihran"
         ],
         "knowsAbout": [
+          "Business Intelligence", "Analytics Engineering", "Executive Reporting",
           "Data Engineering", "AWS", "PySpark", "Apache Spark",
           "Redshift", "Amazon S3", "AWS Glue", "Terraform",
-          "Python", "SQL", "Streaming Pipelines", "Data Lakehouse"
+          "Python", "SQL", "Streaming Pipelines", "Data Lakehouse",
+          "Power BI", "Tableau", "Data Visualization"
         ]
       },
       {
         "@type": "WebSite",
         "@id": "https://imihran.github.io/portfolio/#website",
         "url": "https://imihran.github.io/portfolio/",
-        "name": "Mish Akopyan — Data Engineer Portfolio",
-        "description": "Senior Data Engineer portfolio: AWS pipelines, PySpark transformations, Redshift analytics, and data automation projects.",
+        "name": "Mish Akopyan — Business Intelligence Engineer Portfolio",
+        "description": "Business Intelligence engineering portfolio presented as a data intelligence console: analytics platforms, vendor scorecards, executive reporting, and data pipelines with quantified production outcomes.",
         "author": { "@id": "https://imihran.github.io/portfolio/#person" }
       }
     ]
@@ -56,136 +58,187 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#030712">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-  <div id="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#projects">Skip to case studies</a>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
-      <a href="/" class="navbar-brand">mish.akopyan</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <ul class="navbar-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
+      <a href="./" class="navbar-brand">Mish&nbsp;Akopyan<span class="brand-sub">Data Intelligence</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <ul class="navbar-links" id="nav-links">
+        <li><a href="#projects">Case Studies</a></li>
+        <li><a href="#skills">Toolkit</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a></li>
+        <li><a href="https://github.com/imihran/portfolio" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
-    <div class="container">
-      <div class="hero-content">
-        <p class="hero-overline">// data.engineer.portfolio</p>
-        <h1>Mihran "Mish" Akopyan</h1>
-        <p class="subtitle"><span id="typewriter"></span><span class="typewriter-cursor" aria-hidden="true"></span></p>
-        <p class="tagline">
-          14+ years at Amazon, Microsoft, and Redfin. I design and scale real-time data platforms
-          and streaming pipelines that process billions of events daily — while cutting infrastructure
-          costs by 40%+.
-        </p>
-        <div class="hero-links">
-          <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank" class="btn btn-primary">LinkedIn</a>
-          <a href="https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/edit?usp=sharing" target="_blank" class="btn">Resume</a>
-          <a href="https://github.com/imihran/portfolio" target="_blank" class="btn">GitHub</a>
-        </div>
-      </div>
-      <div class="hero-avatar-wrap">
-        <img
-          src="https://avatars.githubusercontent.com/u/5179732?s=200&v=4"
-          alt="Mish Akopyan"
-          class="hero-avatar"
-        >
-        <div class="hero-avatar-links">
-          <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
-          <a href="https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/edit?usp=sharing" target="_blank">Resume</a>
-        </div>
-      </div>
+  <!-- Hero: one living data field — text layered inside the network -->
+  <header class="hero">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-depth" aria-hidden="true">
+      <span class="depth-ring depth-ring-a"></span>
+      <span class="depth-ring depth-ring-b"></span>
+      <span class="depth-flare"></span>
     </div>
-  </section>
+    <div class="container hero-stage">
 
-  <!-- Projects -->
+      <div class="masthead" aria-hidden="true">
+        <span>SYS&nbsp;//&nbsp;Analytics &amp; BI Intelligence</span>
+        <span class="masthead-rule"></span>
+        <span>FY 2012 — FY 2026 · Online</span>
+      </div>
+
+      <div class="hero-field">
+        <div class="hero-core">
+          <p class="hero-kicker">Operator on duty</p>
+          <div class="hero-portrait" aria-label="Mish Akopyan profile photo">
+            <img src="assets/images/mish-avatar.jpg" alt="Mish Akopyan" width="180" height="180">
+          </div>
+          <h1>Mihran &ldquo;Mish&rdquo; Akopyan</h1>
+          <p class="hero-role">Business Intelligence Engineer &mdash; Amazon <span class="hero-role-prior">previously Microsoft &amp; Redfin</span></p>
+          <p class="hero-deck">
+            I build the analytics layer a multi-billion-dollar marketplace runs on &mdash;
+            acquisition analytics endorsed at VP level, scorecards for the top 30 strategic
+            vendors, and the primitive data layer beneath all executive reporting.
+            Every signal in this field is real: <em>every figure orbiting this page shipped in production.</em>
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Open the case files&nbsp;&darr;</a>
+            <a href="https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/edit?usp=sharing" target="_blank" rel="noopener" class="btn">Resume</a>
+            <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+          </div>
+          <ul class="hero-facts" aria-label="Career at a glance">
+            <li><strong>14+</strong> years in data</li>
+            <li><strong>21+</strong> marketplaces served</li>
+            <li><strong>12</strong> metric domains owned</li>
+            <li><strong>70+</strong> managers unblocked</li>
+          </ul>
+        </div>
+
+        <ul class="kpi-field" aria-label="Telemetry — selected production results">
+          <li class="kpi-node kpi-n1">
+            <a href="projects/customer-acquisition-platform.html" aria-label="$485M+ strategic growth pillar powered by the acquisition analytics platform — read the case study">
+              <span class="kpi-value" data-count="485" data-prefix="$" data-suffix="M+">$485M+</span>
+              <span class="kpi-label">strategic growth pillar &middot; acquisition analytics</span>
+            </a>
+          </li>
+          <li class="kpi-node kpi-n2">
+            <a href="projects/purchase-frequency-analysis.html" aria-label="$265M+ revenue opportunity surfaced in a single $2.3B category — read the case study">
+              <span class="kpi-value" data-count="265" data-prefix="$" data-suffix="M+">$265M+</span>
+              <span class="kpi-label">opportunity surfaced &middot; $2.3B category</span>
+            </a>
+          </li>
+          <li class="kpi-node kpi-n3">
+            <a href="projects/proactive-supply-chain-monitoring.html" aria-label="3,640 hours of manual review eliminated annually across 70+ vendor managers — read the case study">
+              <span class="kpi-value" data-count="3640" data-suffix="&thinsp;hrs">3,640&thinsp;hrs</span>
+              <span class="kpi-label">manual review eliminated / yr &middot; 70+ managers</span>
+            </a>
+          </li>
+          <li class="kpi-node kpi-n4">
+            <a href="projects/executive-analytics-overhaul.html" aria-label="Executive meeting prep under 1 hour, down from 3 to 5 days; 15+ meetings delivered — read the case study">
+              <span class="kpi-value">&lt;1&thinsp;hr</span>
+              <span class="kpi-label">exec prep &middot; down from 3&ndash;5 days</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="hero-provenance">&gt;_ figures sourced from production systems &middot; each node opens its case file</p>
+
+    </div>
+  </header>
+
+  <!-- Featured case studies -->
   <section class="section" id="projects">
     <div class="container">
-      <p class="section-overline">// selected work</p>
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-subtitle">A selection of projects that demonstrate practical data work and automation.</p>
-      <div class="projects-grid" id="projects-grid">
-        <!-- Rendered by JS from projects.json -->
+      <header class="section-head reveal">
+        <p class="section-overline">01&nbsp;//&nbsp;Case Files</p>
+        <h2 class="section-title">Case Studies</h2>
+        <p class="section-subtitle">Nine production systems, streamed as case files. Each carries its own audited figure; the full record is one click in.</p>
+      </header>
+      <div class="case-stream" id="projects-grid">
+        <!-- Rendered by JS from data/projects.json (featured) -->
       </div>
+      <noscript><p class="noscript-note">Case studies require JavaScript to list here &mdash; or browse them directly in the <a href="https://github.com/imihran/portfolio/tree/master/projects">projects folder</a>.</p></noscript>
     </div>
   </section>
 
-  <!-- Other Projects -->
+  <!-- Appendix: other projects -->
   <section class="section" id="other-projects">
     <div class="container">
-      <p class="section-overline">// more work</p>
-      <h2 class="section-title">Other Projects</h2>
-      <p class="section-subtitle">Additional projects spanning analytics, automation, and data exploration.</p>
-      <div class="projects-grid projects-grid--compact" id="other-projects-grid">
-        <!-- Rendered by JS from projects.json (non-featured) -->
+      <header class="section-head reveal">
+        <p class="section-overline">02&nbsp;//&nbsp;Auxiliary Nodes</p>
+        <h2 class="section-title">Additional Work</h2>
+        <p class="section-subtitle">Smaller engagements and open tooling &mdash; analytics, automation, and exploration.</p>
+      </header>
+      <div class="appendix-grid" id="other-projects-grid">
+        <!-- Rendered by JS from data/projects.json (non-featured) -->
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Toolkit -->
   <section class="section" id="skills">
     <div class="container">
-      <p class="section-overline">// tech stack</p>
-      <h2 class="section-title">Tech &amp; Tools</h2>
-      <p class="section-subtitle">What I work with day to day.</p>
+      <header class="section-head reveal">
+        <p class="section-overline">03&nbsp;//&nbsp;Instrumentation</p>
+        <h2 class="section-title">Method &amp; Toolkit</h2>
+        <p class="section-subtitle">The instruments behind the figures, in daily rotation.</p>
+      </header>
       <div class="skills-grid">
-        <div class="skill-group">
-          <p class="skill-number">01</p>
+        <div class="skill-group reveal">
+          <p class="skill-number">3.1</p>
+          <h3>Visualization &amp; BI</h3>
+          <ul>
+            <li>Power BI</li>
+            <li>Tableau</li>
+            <li>Seaborn</li>
+            <li>Matplotlib</li>
+            <li>Google Sheets</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <p class="skill-number">3.2</p>
           <h3>Languages &amp; Data</h3>
           <ul>
-            <li>Python</li>
             <li>SQL</li>
+            <li>Python</li>
             <li>PySpark</li>
             <li>Pandas</li>
             <li>NumPy</li>
             <li>SciPy</li>
           </ul>
         </div>
-        <div class="skill-group">
-          <p class="skill-number">02</p>
-          <h3>Cloud &amp; Infrastructure</h3>
+        <div class="skill-group reveal">
+          <p class="skill-number">3.3</p>
+          <h3>Cloud &amp; Warehouse</h3>
           <ul>
             <li>AWS</li>
-            <li>Azure</li>
-            <li>S3</li>
             <li>Redshift</li>
+            <li>S3</li>
             <li>Glue</li>
             <li>Lambda</li>
+            <li>Azure</li>
             <li>Terraform</li>
           </ul>
         </div>
-        <div class="skill-group">
-          <p class="skill-number">03</p>
-          <h3>Visualization &amp; BI</h3>
+        <div class="skill-group reveal">
+          <p class="skill-number">3.4</p>
+          <h3>Automation &amp; AI</h3>
           <ul>
-            <li>Power BI</li>
-            <li>Seaborn</li>
-            <li>Matplotlib</li>
-            <li>Tableau</li>
-            <li>Google Sheets</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <p class="skill-number">04</p>
-          <h3>Automation &amp; Tools</h3>
-          <ul>
-            <li>Selenium</li>
-            <li>n8n</li>
-            <li>Jupyter</li>
-            <li>BeautifulSoup</li>
             <li>OpenAI API</li>
+            <li>n8n</li>
+            <li>Selenium</li>
+            <li>BeautifulSoup</li>
+            <li>Jupyter</li>
             <li>Git</li>
           </ul>
         </div>
@@ -193,21 +246,20 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact / colophon -->
   <footer class="footer" id="contact">
     <div class="container">
-      <p class="section-overline">// get in touch</p>
+      <p class="section-overline">04&nbsp;//&nbsp;Uplink</p>
+      <p class="footer-lede">Channel open &mdash; reach me on any of the following.</p>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/imihran/portfolio" target="_blank">GitHub</a>
-        <a href="https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/edit?usp=sharing" target="_blank">Resume</a>
+        <a href="https://www.linkedin.com/in/mish-akopyan/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/imihran/portfolio" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/edit?usp=sharing" target="_blank" rel="noopener">Resume</a>
       </div>
-      <p>&copy; 2026 Mish Akopyan</p>
+      <p class="colophon">Set in Chakra Petch, Sora &amp; JetBrains Mono. Static HTML, no build step. All effects rendered locally. &copy; 2026 Mish Akopyan</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
