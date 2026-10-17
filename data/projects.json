@@ -154,16 +154,6 @@
     "kpi": { "value": "21+", "label": "marketplaces on standardized metrics" }
   },
   {
-    "id": "job-scraper",
-    "title": "LinkedIn Job Scraper",
-    "summary": "Automated job postings collection from LinkedIn using Selenium, with salary extraction, pagination handling, and CSV export for trend analysis.",
-    "stack": ["Python", "Selenium", "BeautifulSoup", "Pandas", "Tkinter"],
-    "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App",
-    "demo": null,
-    "image": null,
-    "featured": false
-  },
-  {
     "id": "tiktok-eda",
     "title": "TikTok EDA & Hypothesis Testing",
     "summary": "Exploratory data analysis and statistical hypothesis testing on TikTok claim verification data using Pandas, Seaborn, and SciPy.",
@@ -189,26 +179,6 @@
     "summary": "Maps on-prem VM inventory to Azure SKUs using the Azure Resource API to estimate monthly cloud migration costs across pricing tiers.",
     "stack": ["Python", "Azure API", "Pandas", "Excel"],
     "github": "https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/mapping-tool",
-    "demo": null,
-    "image": null,
-    "featured": false
-  },
-  {
-    "id": "recruiter-workflow",
-    "title": "Recruiter Log & Respond Workflow",
-    "summary": "n8n automation that classifies incoming emails with GPT-4, auto-labels Gmail, summarizes recruiter outreach, and logs everything to Google Sheets.",
-    "stack": ["n8n", "OpenAI API", "Gmail API", "Google Sheets"],
-    "github": "https://github.com/imihran/portfolio/blob/master/Public%20Project%20Files/Recruiter%20Log%20and%20Respond%20Workflow.json",
-    "demo": null,
-    "image": null,
-    "featured": false
-  },
-  {
-    "id": "job-hunt-template",
-    "title": "Job Hunt Template",
-    "summary": "Local-first toolkit for tracking recruiter outreach, role pitches, compensation ranges, and follow-ups in SQLite, with idempotent JSON upserts and privacy-safe templates.",
-    "stack": ["Python", "SQLite", "CLI Automation", "Shell", "Data Modeling"],
-    "github": "https://github.com/imihran/job-hunt-template",
     "demo": null,
     "image": null,
     "featured": false

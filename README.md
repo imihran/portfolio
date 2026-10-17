@@ -31,13 +31,6 @@ A selection of projects that demonstrate practical data work and automation.
 
    End-to-end design of a **serverless, cloud-native data pipeline** for processing large-scale clickstream data.
 
-- [Job Scraper (Python + Selenium)](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Scrapper%20App)
-
-   <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Selenium.png" alt="Selenium" width="30"/> <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Python.png" alt="Python" width="30"/> <img src="https://raw.githubusercontent.com/imihran/portfolio/master/Public%20Project%20Files/images/Pandas.png" alt="Pandas" width="50"/>
-
-
-   Automated job postings collection (LinkedIn) with scheduled ingestion and Google Sheets export for trend analysis.
-
 - [TikTok EDA & Hypothesis Testing (Notebooks)](https://github.com/imihran/portfolio/tree/master/Public%20Project%20Files/Tik%20Tok)
 
    EDA, visualization and statistical tests using Pandas, Seaborn and SciPy.
@@ -63,7 +56,6 @@ Other notebooks: Olympic Medals analysis, Cryptocurrency market exploration, Sou
 ## Tech & Tools
 
 - Python, Pandas, NumPy, SciPy, Seaborn
-- Selenium for web scraping
 - Jupyter Notebooks
 - Google Sheets API, AWS (VMs)
 - Power BI

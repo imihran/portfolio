@@ -75,16 +75,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://imihran.github.io/portfolio/projects/job-hunt-template.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://imihran.github.io/portfolio/projects/job-scraper.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://imihran.github.io/portfolio/projects/tiktok-eda.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -96,11 +86,6 @@
   </url>
   <url>
     <loc>https://imihran.github.io/portfolio/projects/azure-vm-mapping.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://imihran.github.io/portfolio/projects/recruiter-workflow.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
