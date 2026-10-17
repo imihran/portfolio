@@ -21,7 +21,7 @@
     "image": null,
     "featured": true,
     "type": "enterprise",
-    "kpi": { "value": "<5 min", "label": "per data request, down from ~30 minutes" }
+    "kpi": { "value": "<5 min", "label": "per pipeline profile, down from ~30 minutes" }
   },
   {
     "id": "repopulse",

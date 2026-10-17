@@ -903,7 +903,7 @@ Through a modular five-part design, it converts raw, unstructured clickstream ev
 ## 🌐 Business Impact
 This architecture empowers analysts, product managers, and leadership teams to:
 - Track user journeys and conversion funnels in near real time.  
-- Reduce time-to-insight by 80% compared to legacy ETL systems.  
+- Design target: reduce time-to-insight by ~80% vs. legacy batch ETL (not yet measured).  
 - Lower storage and compute costs through serverless and Parquet-based optimization.  
 - Maintain high confidence in data quality, lineage, and security.
 
