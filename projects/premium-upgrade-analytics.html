@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Purchase Journey Analytics (Trade Up) — Mish Akopyan</title>
+  <title>Customer Purchase Journey Analytics (Premium Upgrade) — Mish Akopyan</title>
   <meta name="description" content="Customer purchase journey analytics platform measuring base-to-premium product progression with novel classification methodology and 8-stage Spark pipeline.">
-  <link rel="canonical" href="https://imihran.github.io/portfolio/projects/trade-up-analytics.html">
+  <link rel="canonical" href="https://imihran.github.io/portfolio/projects/premium-upgrade-analytics.html">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://imihran.github.io/portfolio/projects/trade-up-analytics.html">
-  <meta property="og:title" content="Customer Purchase Journey Analytics (Trade Up) — Mish Akopyan">
+  <meta property="og:url" content="https://imihran.github.io/portfolio/projects/premium-upgrade-analytics.html">
+  <meta property="og:title" content="Customer Purchase Journey Analytics (Premium Upgrade) — Mish Akopyan">
   <meta property="og:description" content="Novel customer classification methodology measuring base-to-premium progression with 8-stage Spark pipeline serving 7 product categories.">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/5179732?s=400&v=4">
 
@@ -31,7 +31,7 @@
   <div class="container">
     <article class="project-detail">
       <a href="../#projects" class="back-link">&larr; All Projects</a>
-      <h1>Customer Purchase Journey Analytics (Trade Up)</h1>
+      <h1>Customer Purchase Journey Analytics (Premium Upgrade)</h1>
       <div class="project-meta">
         <span class="tag">PySpark</span>
         <span class="tag">Spark</span>
@@ -49,14 +49,14 @@
         <h2>Problem</h2>
         <p>
           No way to quantify how customers progress from base-tier to premium products over time.
-          Category teams needed empirical evidence of "Trade Up" behavior to inform vendor collaboration
+          Category teams needed empirical evidence of "premium upgrade" behavior to inform vendor collaboration
           and customer engagement strategy, but the problem space was ambiguous with multiple valid approaches.
         </p>
       </div>
       <div class="detail-section">
         <h2>Approach</h2>
         <p>
-          Developed a novel Trade Up customer classification methodology using T12M rolling windows with
+          Developed a novel premium-upgrade customer classification methodology using T12M rolling windows with
           temporal ordering constraints (premium purchase must occur AFTER base purchase). Built an 8-stage
           pipeline with full dependency chain, Spark tuning, and a fallback mechanism for handling row
           overflow at scale.
@@ -65,8 +65,8 @@
       <div class="detail-section">
         <h2>Technical Details</h2>
         <ul>
-          <li><strong>Trade Up classification:</strong> T12M rolling window with temporal ordering constraint</li>
-          <li><strong>Trade Up Retain metric:</strong> identifies customers sustaining premium purchasing behavior</li>
+          <li><strong>Premium-upgrade classification:</strong> T12M rolling window with temporal ordering constraint</li>
+          <li><strong>Upgrade-retention metric:</strong> identifies customers sustaining premium purchasing behavior</li>
           <li><strong>8-stage pipeline</strong> with explicit dependency chain (sequential + parallel fan-in stages)</li>
           <li><strong>Weighted SUMPRODUCT rollup</strong> to avoid double-counting overlapping customers at brand/vendor/category levels</li>
           <li><strong>LISTAGG fallback mechanism</strong> for row overflow at scale (15K+ recommendation items per base)</li>
@@ -79,7 +79,7 @@
         <h2>Impact</h2>
         <ul>
           <li>Director-sponsored initiative directly informing customer engagement strategy</li>
-          <li>Enables category teams to quantify Trade Up behavior with empirical evidence</li>
+          <li>Enables category teams to quantify premium-upgrade behavior with empirical evidence</li>
           <li>Supports vendor collaboration to identify "new money" opportunities</li>
           <li>Featured in monthly business review presentation</li>
           <li>Architecture pattern adopted as reference for future analytics pipelines</li>

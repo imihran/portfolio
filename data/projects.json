@@ -9,7 +9,7 @@
     "image": null,
     "featured": true,
     "type": "enterprise",
-    "kpi": { "value": "$485M+", "label": "strategic growth pillar powered by the platform" }
+    "kpi": { "value": "11", "label": "customer dimensions on a VP-endorsed platform" }
   },
   {
     "id": "ai-workflow-automation",
@@ -38,18 +38,18 @@
   {
     "id": "proactive-supply-chain-monitoring",
     "title": "Proactive Supply Chain Monitoring System",
-    "summary": "Transformed vendor relationship management from reactive firefighting to proactive issue identification by building a multi-layered alarm system that saves ~3,640 hours annually across 70+ managers.",
+    "summary": "Transformed vendor relationship management from reactive firefighting to proactive issue identification by building a multi-layered alarm system that saves ~1 hour per week for each of dozens of vendor managers.",
     "stack": ["SQL", "ETL", "Statistical Analysis", "Alerting Systems", "Data Pipeline"],
     "github": null,
     "demo": null,
     "image": null,
     "featured": true,
     "type": "enterprise",
-    "kpi": { "value": "3,640 hrs", "label": "saved annually across 70+ vendor managers" }
+    "kpi": { "value": "~1 hr/wk", "label": "saved per vendor manager (estimate)" }
   },
   {
-    "id": "trade-up-analytics",
-    "title": "Customer Purchase Journey Analytics (Trade Up)",
+    "id": "premium-upgrade-analytics",
+    "title": "Customer Purchase Journey Analytics (Premium Upgrade)",
     "summary": "Designed a customer purchase journey analytics platform measuring base-to-premium product progression, with a novel customer classification methodology and an 8-stage data pipeline serving 7 product categories.",
     "stack": ["PySpark", "Spark", "SQL", "Pipeline Orchestration", "BI Dashboards", "Data Modeling"],
     "github": null,
@@ -86,7 +86,7 @@
   {
     "id": "executive-analytics-overhaul",
     "title": "Executive Vendor Analytics Platform",
-    "summary": "Led the system redesign for executive-level vendor meetings with top 30 strategic partners, establishing formalized intake processes and standardized scorecards that reduced preparation time from 3-5 days to under 1 hour.",
+    "summary": "Led the system redesign for executive-level vendor meetings with the organization's largest strategic partners, establishing formalized intake processes and standardized scorecards that reduced preparation time from 3-5 days to under 1 hour.",
     "stack": ["SQL", "Data Modeling", "Process Design", "Documentation"],
     "github": null,
     "demo": null,
@@ -96,16 +96,16 @@
     "kpi": { "value": "<1 hr", "label": "executive prep, down from 3–5 days; 15+ meetings delivered" }
   },
   {
-    "id": "cost-to-serve-analytics",
-    "title": "Cost to Serve Analytics Framework",
-    "summary": "Led BI development for an SVP-sponsored initiative delivering the first vendor Cost to Serve analysis, establishing a replicable framework for transparent cost-based vendor negotiations.",
+    "id": "vendor-unit-economics-analytics",
+    "title": "Vendor Unit-Economics Analytics Framework",
+    "summary": "Led BI development for an SVP-sponsored initiative delivering the first vendor unit-economics analysis, establishing a replicable framework for transparent cost-based vendor negotiations.",
     "stack": ["SQL", "Data Analysis", "Cost Modeling", "Business Strategy"],
     "github": null,
     "demo": null,
     "image": null,
     "featured": true,
     "type": "enterprise",
-    "kpi": { "value": "30+", "label": "strategic vendors on a replicable cost-to-serve framework" }
+    "kpi": { "value": "1st", "label": "replicable vendor unit-economics framework" }
   },
   {
     "id": "clickstream-pipeline",
@@ -132,14 +132,14 @@
   {
     "id": "purchase-frequency-analysis",
     "title": "Purchase Frequency & Cross-Sell Analysis",
-    "summary": "Deep analysis of customer purchase patterns and product relationships in a $2.3B category that revealed a $265M+ revenue opportunity and directly drove product feature development.",
+    "summary": "Deep analysis of customer purchase patterns and product relationships in a multi-billion-dollar category that revealed a revenue opportunity worth ~11% of category revenue and directly drove product feature development.",
     "stack": ["SQL", "Data Analysis", "Business Strategy", "Revenue Modeling"],
     "github": null,
     "demo": null,
     "image": null,
     "featured": false,
     "type": "enterprise",
-    "kpi": { "value": "$265M+", "label": "opportunity surfaced in a $2.3B category" }
+    "kpi": { "value": "~11%", "label": "of category revenue surfaced as opportunity" }
   },
   {
     "id": "global-metrics-platform",
