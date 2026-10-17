@@ -2,7 +2,7 @@
 
 <img src="https://avatars.githubusercontent.com/u/5179732?s=96&v=4" alt="profile_pic" width="120" align="right"/>
 
-Senior Data Engineer with 14+ years at Amazon, Microsoft, and Redfin. I design and scale real-time data platforms and streaming pipelines that process billions of events daily—while cutting infrastructure costs by 40%+.
+Business Intelligence Engineer (L5) at Amazon with 7+ years in data; previously Microsoft (consultant) and Redfin. I build analytics platforms, data pipelines, and executive reporting on AWS (Spark, Redshift, Glue, SQL, Python).
 
 - LinkedIn: [mish-akopyan](https://www.linkedin.com/in/mish-akopyan/)
 - Resume: available on request via [LinkedIn](https://www.linkedin.com/in/mish-akopyan/)
