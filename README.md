@@ -5,7 +5,7 @@
 Senior Data Engineer with 14+ years at Amazon, Microsoft, and Redfin. I design and scale real-time data platforms and streaming pipelines that process billions of events daily—while cutting infrastructure costs by 40%+.
 
 - LinkedIn: [mish-akopyan](https://www.linkedin.com/in/mish-akopyan/)
-- Resume: [Direct PDF export](https://docs.google.com/document/d/19D6ynIfyszZ5uhV3g0nkb-ZpJ55YDoHH5UkJfp3x9Bs/export?format=pdf)
+- Resume: available on request via [LinkedIn](https://www.linkedin.com/in/mish-akopyan/)
 
 ---
 
